@@ -84,6 +84,19 @@ Build flexible components using the Radix UI/shadcn pattern:
 - **Web3 Security**: Always simulate transactions, use access control (Ownable/AccessControl), and implement reentrancy guards in contracts.
 - **Rate Limiting**: Implement rate limiting on API routes to prevent brute force and DoS.
 
+### 📘 TypeScript Best Practices
+- **Type Definitions**: Always ensure proper TypeScript configuration files are present and correctly configured.
+  - **`next-env.d.ts`** (Next.js projects): Auto-generated file containing type definitions for Next.js and React JSX. Missing this file causes `TS7026: JSX element implicitly has type any`. Always include in project root and in `tsconfig.json` include array.
+  - **`tsconfig.json`**: Must include proper compiler options (`jsx: "preserve"` for Next.js, `strict: true`, proper `lib` and `target` settings).
+  - **Type packages**: Always install matching `@types/*` packages for runtime dependencies (e.g., `@types/react` matching React version, `@types/node`).
+- **Strict Mode**: Enable `strict: true` in `tsconfig.json` to catch potential issues early.
+- **Type Safety**: Prefer explicit types over `any`. Use `unknown` when type is truly unknown and narrow it with type guards.
+- **Null Safety**: Handle potential null/undefined values explicitly. Use optional chaining (`?.`) and nullish coalescing (`??`).
+- **Error Prevention**: 
+  - Run `npm install` or `pnpm install` after cloning to generate auto-generated type files.
+  - Restart TypeScript server in IDE after configuration changes.
+  - Verify all required type definition files exist before starting development.
+
 ### 🎨 Styling, Layout, Formatting & Linting
 - **Formatting & Linting**: Mandatory use of **ESLint** combined with **Prettier**. ESLint handles code quality and logic rules, while Prettier handles formatting and indentation (2 spaces).
 - **Integration**: Use `eslint-config-prettier` to disable ESLint rules that might conflict with Prettier. All style issues should be surfaced through the linter.
@@ -107,6 +120,11 @@ Build flexible components using the Radix UI/shadcn pattern:
 - [ ] Is the component accessible (ARIA, Keyboard)?
 - [ ] Is the folder structure following the Feature-based pattern?
 - [ ] Is the code formatted with Prettier and linted with ESLint?
+- [ ] Are all TypeScript configuration files present and correct?
+- [ ] Does `next-env.d.ts` exist in the project root (Next.js projects)?
+- [ ] Are all required `@types/*` packages installed and version-matched?
+- [ ] Is TypeScript strict mode enabled (`strict: true`)?
+- [ ] Are there no TypeScript errors (especially TS7026 JSX errors)?
 - [ ] Are database queries optimized (no N+1)?
 - [ ] Is Redis caching implemented for hot data?
 - [ ] Is the GraphQL schema type-safe and validated?
