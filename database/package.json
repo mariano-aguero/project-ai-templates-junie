@@ -1,0 +1,26 @@
+{
+  "name": "@project/database-template",
+  "version": "1.0.0",
+  "description": "Professional Database & API template for Claude",
+  "author": "Mariano Aguero <mariano.aguero@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariano-aguero/project-claude-templates.git"
+  },
+  "dependencies": {
+    "prisma": "^6.x",
+    "@prisma/client": "^6.x",
+    "graphql": "^16.x",
+    "graphql-yoga": "^5.x",
+    "@pothos/core": "^4.x",
+    "@pothos/plugin-prisma": "^4.x",
+    "ioredis": "^5.x",
+    "bullmq": "^5.x",
+    "argon2": "^0.41.x",
+    "zod": "^3.x"
+  },
+  "devDependencies": {
+    "typescript": "^5.x",
+    "@types/node": "^20.x"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@project/audit-template",
+  "version": "1.0.0",
+  "description": "Professional Smart Contract Audit template for Claude",
+  "author": "Mariano Aguero <mariano.aguero@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariano-aguero/project-claude-templates.git"
+  },
+  "devDependencies": {
+    "solhint": "^5.x",
+    "prettier-plugin-solidity": "^1.x",
+    "@cyfrin/aderyn": "latest",
+    "@openzeppelin/contracts": "^5.x",
+    "solidity-docgen": "^0.6.x"
+  },
+  "scripts": {
+    "audit:lint": "solhint 'contracts/**/*.sol'",
+    "audit:format": "prettier --check 'contracts/**/*.sol'",
+    "audit:aderyn": "aderyn .",
+    "audit:doc": "solidity-docgen"
+  }
+}

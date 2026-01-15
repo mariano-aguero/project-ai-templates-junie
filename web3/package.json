@@ -1,0 +1,26 @@
+{
+  "name": "@project/web3-template",
+  "version": "1.0.0",
+  "description": "Professional Web3 & dApp template for Claude",
+  "author": "Mariano Aguero <mariano.aguero@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariano-aguero/project-claude-templates.git"
+  },
+  "dependencies": {
+    "viem": "^2.x",
+    "wagmi": "^2.x",
+    "@reown/appkit": "^1.x",
+    "@reown/appkit-adapter-wagmi": "^1.x",
+    "siwe": "^2.x",
+    "@tanstack/react-query": "^5.x",
+    "abitype": "^1.x"
+  },
+  "devDependencies": {
+    "hardhat": "^2.x",
+    "@nomicfoundation/hardhat-toolbox": "^5.x",
+    "@openzeppelin/contracts": "^5.x",
+    "prettier-plugin-solidity": "^1.x",
+    "solhint": "^5.x"
+  }
+}
