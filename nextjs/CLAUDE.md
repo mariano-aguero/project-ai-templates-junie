@@ -241,14 +241,14 @@ const ratelimit = new Ratelimit({ ... });
 ### Development
 
 ```bash
-npm run dev          # Start dev server with hot reload
-npm run dev:turbo    # Start with Turbopack (faster)
-npm run build        # Production build
-npm run start        # Start production server
-npm run lint         # Run ESLint
-npm run type-check   # TypeScript validation
-npm run format       # Format code with Prettier
-npm run commit       # Interactive commit using commitizen
+pnpm dev          # Start dev server with hot reload
+pnpm dev:turbo    # Start with Turbopack (faster)
+pnpm build        # Production build
+pnpm start        # Start production server
+pnpm lint         # Run ESLint
+pnpm type-check   # TypeScript validation
+pnpm format       # Format code with Prettier
+pnpm commit       # Interactive commit using commitizen
 ```
 
 ## Git & Commit Standards
@@ -258,8 +258,8 @@ npm run commit       # Interactive commit using commitizen
 ### Code Generation
 
 ```bash
-npx create-next-app@latest  # Create new app
-npx @next/codemod@latest    # Run codemods for upgrades
+pnpm dlx create-next-app@latest  # Create new app
+pnpm dlx @next/codemod@latest    # Run codemods for upgrades
 ```
 
 ## Project Structure

@@ -199,9 +199,9 @@ import { useActionState } from 'react';
 ### Step 1: Install Next.js
 
 ```bash
-npm uninstall react-scripts
-npm install next@latest react@latest react-dom@latest
-npm install --save-dev @types/node
+pnpm remove react-scripts
+pnpm add next@latest react@latest react-dom@latest
+pnpm add -D @types/node
 ```
 
 ### Step 2: Update package.json
@@ -248,23 +248,23 @@ import './globals.css';
 
 ```bash
 # Upgrade to latest
-npx @next/codemod@latest upgrade latest
+pnpm dlx @next/codemod@latest upgrade latest
 
 # Specific codemods
-npx @next/codemod@latest app-dir-migration
-npx @next/codemod@latest next-image-to-legacy-image
-npx @next/codemod@latest new-link
+pnpm dlx @next/codemod@latest app-dir-migration
+pnpm dlx @next/codemod@latest next-image-to-legacy-image
+pnpm dlx @next/codemod@latest new-link
 ```
 
 ### Version-Specific Codemods
 
 ```bash
 # Next.js 15 codemods
-npx @next/codemod@latest 15.0.0-async-request-api
-npx @next/codemod@latest 15.0.0-navigation-hooks
+pnpm dlx @next/codemod@latest 15.0.0-async-request-api
+pnpm dlx @next/codemod@latest 15.0.0-navigation-hooks
 
 # Next.js 14 codemods
-npx @next/codemod@latest 14.0.0-viewport-export
+pnpm dlx @next/codemod@latest 14.0.0-viewport-export
 ```
 
 ## Incremental Adoption Strategy

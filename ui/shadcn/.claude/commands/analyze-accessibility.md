@@ -64,13 +64,13 @@ Analyze components for accessibility issues and provide recommendations.
 Install and run automated tools:
 ```bash
 # Install testing dependencies
-npm install -D @axe-core/react jest-axe
+pnpm add -D @axe-core/react jest-axe
 
 # Run axe-core tests
-npx axe <url>
+pnpm dlx axe <url>
 
 # Use React Testing Library
-npm test -- --coverage
+pnpm test -- --coverage
 ```
 
 ## Manual Testing Checklist

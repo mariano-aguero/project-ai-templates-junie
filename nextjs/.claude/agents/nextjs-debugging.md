@@ -172,13 +172,13 @@ debug('User Data', { id: 1, name: 'John' });
 
 ```bash
 # Verbose build output
-NEXT_TELEMETRY_DEBUG=1 npm run build
+NEXT_TELEMETRY_DEBUG=1 pnpm build
 
 # Debug specific build issues
-npm run build -- --debug
+pnpm build -- --debug
 
 # Profile build performance
-NEXT_PROFILE=1 npm run build
+NEXT_PROFILE=1 pnpm build
 ```
 
 ### Common Build Errors
@@ -186,13 +186,13 @@ NEXT_PROFILE=1 npm run build
 ```typescript
 // Error: Module not found
 // Solution: Check imports and install missing packages
-npm ls [package-name]
-npm install [missing-package]
+pnpm list [package-name]
+pnpm add [missing-package]
 
 // Error: Cannot find module '.next/server/app-paths-manifest.json'
 // Solution: Clean and rebuild
 rm -rf .next
-npm run build
+pnpm build
 
 // Error: Dynamic server usage
 // Solution: Add dynamic = 'force-dynamic' or use generateStaticParams
@@ -350,20 +350,20 @@ export class DebugErrorBoundary extends Component<Props, State> {
 
 ```bash
 # Debug Node.js process
-NODE_OPTIONS='--inspect' npm run dev
+NODE_OPTIONS='--inspect' pnpm dev
 # Then open chrome://inspect
 
 # Debug build process
-DEBUG=* npm run build
+DEBUG=* pnpm build
 
 # Analyze bundle
-ANALYZE=true npm run build
+ANALYZE=true pnpm build
 
 # Debug with verbose logging
-NEXT_TELEMETRY_DEBUG=1 npm run dev
+NEXT_TELEMETRY_DEBUG=1 pnpm dev
 
 # Check for type errors
-npm run type-check -- --listFilesOnly
+pnpm type-check -- --listFilesOnly
 ```
 
 ## Chrome DevTools Tips

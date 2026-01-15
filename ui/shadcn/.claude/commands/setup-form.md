@@ -116,8 +116,8 @@ If the user says: `/setup-form contact`
 
 1. Install dependencies:
 ```bash
-npm install react-hook-form @hookform/resolvers zod
-npx shadcn@latest add form input textarea button
+pnpm add react-hook-form @hookform/resolvers zod
+pnpm dlx shadcn@latest add form input textarea button
 ```
 
 2. Create validation schema

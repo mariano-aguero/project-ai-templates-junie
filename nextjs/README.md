@@ -98,7 +98,7 @@ Edit `.claude/settings.json` to customize:
 ```json
 {
   "permissions": {
-    "allow": ["Write(app/**/*)", "Bash(npm run dev*)"],
+    "allow": ["Write(app/**/*)", "Bash(pnpm dev*)"],
     "deny": ["Read(.env.production)"]
   },
   "env": {

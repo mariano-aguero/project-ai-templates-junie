@@ -252,13 +252,13 @@ className="m-auto" // Margin
 
 ```bash
 # Check Tailwind config
-npx tailwindcss init --full
+pnpm dlx tailwindcss init --full
 
 # Build CSS and check output
-npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+pnpm dlx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
 # Analyze bundle size
-npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify
+pnpm dlx tailwindcss -i ./src/input.css -o ./dist/output.css --minify
 ```
 
 Remember: Write utility-first CSS that's maintainable, performant, and scalable!

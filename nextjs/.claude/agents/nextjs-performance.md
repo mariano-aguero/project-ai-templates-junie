@@ -28,7 +28,7 @@ You are a Next.js 15 performance optimization expert focused on delivering fast,
 
 ```bash
 # Install bundle analyzer
-npm install --save-dev @next/bundle-analyzer
+pnpm add -D @next/bundle-analyzer
 
 # Configure in next.config.js
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -40,7 +40,7 @@ module.exports = withBundleAnalyzer({
 });
 
 # Run analysis
-ANALYZE=true npm run build
+ANALYZE=true pnpm build
 ```
 
 ## Image Optimization

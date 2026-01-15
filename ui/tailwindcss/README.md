@@ -27,11 +27,11 @@ cp tailwindcss/CLAUDE.md your-project/
 2. Install Tailwind CSS in your project:
 
 ```bash
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+pnpm add -D tailwindcss postcss autoprefixer
+pnpm dlx tailwindcss init -p
 
 # Optional: Install additional plugins
-npm install -D @tailwindcss/typography @tailwindcss/forms @tailwindcss/aspect-ratio @tailwindcss/container-queries
+pnpm add -D @tailwindcss/typography @tailwindcss/forms @tailwindcss/aspect-ratio @tailwindcss/container-queries
 ```
 
 3. The configuration will be automatically loaded when you start Claude Code in your project.

@@ -154,7 +154,7 @@ const handleKeyDown = (e: React.KeyboardEvent) => {
 
 ```bash
 # Automated testing
-npm install -D @axe-core/react jest-axe
+pnpm add -D @axe-core/react jest-axe
 
 # Manual testing checklist
 - [ ] Navigate with keyboard only

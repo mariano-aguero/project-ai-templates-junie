@@ -446,44 +446,44 @@ return (
 
 ```bash
 # Initialize shadcn/ui
-npx shadcn@latest init
+pnpm dlx shadcn@latest init
 
 # Add components
-npx shadcn@latest add button card dialog form
+pnpm dlx shadcn@latest add button card dialog form
 
 # Add all components
-npx shadcn@latest add --all
+pnpm dlx shadcn@latest add --all
 
 # Update components
-npx shadcn@latest add button --overwrite
+pnpm dlx shadcn@latest add button --overwrite
 
 # Build custom registry
-npx shadcn@latest build
+pnpm dlx shadcn@latest build
 ```
 
 ### Component Development
 
 ```bash
 # Development server
-npm run dev
+pnpm dev
 
 # Type checking
-npm run type-check
+pnpm type-check
 
 # Format code with Prettier
-npm run format
+pnpm format
 
 # Linting
-npm run lint
+pnpm lint
 
 # Testing
-npm run test
+pnpm test
 
 # Build
-npm run build
+pnpm build
 
 # Commit
-npm run commit  # Interactive commit using commitizen
+pnpm commit  # Interactive commit using commitizen
 ```
 
 ## Git & Commit Standards

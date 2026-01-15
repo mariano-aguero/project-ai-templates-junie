@@ -9,9 +9,9 @@ Add one or more shadcn/ui components to your project.
 ## Instructions
 
 1. Check if shadcn/ui is initialized in the project
-2. If not initialized, suggest running `npx shadcn@latest init` first
+2. If not initialized, suggest running `pnpm dlx shadcn@latest init` first
 3. For each component requested:
-   - Run `npx shadcn@latest add [component]`
+   - Run `pnpm dlx shadcn@latest add [component]`
    - Verify component was added successfully
    - Check for any peer dependencies
 4. If components have dependencies on each other, install in correct order
@@ -45,9 +45,9 @@ If the user says: `/add-component form select date-picker`
 
 Execute:
 ```bash
-npx shadcn@latest add form
-npx shadcn@latest add select  
-npx shadcn@latest add date-picker
+pnpm dlx shadcn@latest add form
+pnpm dlx shadcn@latest add select  
+pnpm dlx shadcn@latest add date-picker
 ```
 
 Then provide usage examples for each component added.

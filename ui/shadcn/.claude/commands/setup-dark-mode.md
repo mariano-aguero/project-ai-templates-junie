@@ -19,7 +19,7 @@ Based on the framework detected or specified:
 
 ### Next.js (App Router)
 ```bash
-npm install next-themes
+pnpm add next-themes
 ```
 
 Create `components/theme-provider.tsx`:
@@ -108,7 +108,7 @@ export const useTheme = () => {
 
 ### Remix
 ```bash
-npm install remix-themes
+pnpm add remix-themes
 ```
 
 In `app/root.tsx`:

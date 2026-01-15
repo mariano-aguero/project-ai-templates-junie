@@ -59,7 +59,7 @@ You are a Next.js 15 deployment expert specializing in production configurations
   "env": {
     "DATABASE_URL": "@database-url"
   },
-  "buildCommand": "npm run build",
+  "buildCommand": "pnpm build",
   "outputDirectory": ".next"
 }
 ```
@@ -68,7 +68,7 @@ You are a Next.js 15 deployment expert specializing in production configurations
 
 ```bash
 # Install Vercel CLI
-npm i -g vercel
+pnpm add -g vercel
 
 # Deploy to production
 vercel --prod
@@ -93,30 +93,27 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Install dependencies based on the preferred package manager
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* .npmrc* ./
-RUN \
-  if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
-  elif [ -f package-lock.json ]; then npm ci; \
-  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i --frozen-lockfile; \
-  else echo "Lockfile not found." && exit 1; \
-  fi
+# Enable pnpm
+RUN corepack enable pnpm
+
+# Install dependencies with pnpm
+COPY package.json pnpm-lock.yaml* .npmrc* ./
+RUN pnpm install --frozen-lockfile
 
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
+
+# Enable pnpm
+RUN corepack enable pnpm
+
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Next.js collects completely anonymous telemetry data about general usage.
 ENV NEXT_TELEMETRY_DISABLED=1
 
-RUN \
-  if [ -f yarn.lock ]; then yarn run build; \
-  elif [ -f package-lock.json ]; then npm run build; \
-  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm run build; \
-  else echo "Lockfile not found." && exit 1; \
-  fi
+RUN pnpm build
 
 # Production image, copy all the files and run next
 FROM base AS runner
@@ -203,10 +200,11 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci
+        - corepack enable pnpm
+        - pnpm install --frozen-lockfile
     build:
       commands:
-        - npm run build
+        - pnpm build
   artifacts:
     baseDirectory: .next
     files:
@@ -272,16 +270,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: 'pnpm'
       
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run type-check
-      - run: npm test
-      - run: npm run test:e2e
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm type-check
+      - run: pnpm test
+      - run: pnpm test:e2e
 
   build-and-deploy:
     needs: test
@@ -289,17 +290,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: 'pnpm'
       
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
       
       - name: Build application
-        run: npm run build
+        run: pnpm build
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}

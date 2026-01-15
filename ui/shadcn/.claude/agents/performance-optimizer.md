@@ -48,16 +48,16 @@ You are a performance optimization expert specializing in shadcn/ui with experti
 ### Bundle Analysis Setup
 ```bash
 # Install bundle analyzer
-npm install --save-dev @next/bundle-analyzer
-npm install --save-dev webpack-bundle-analyzer
+pnpm add -D @next/bundle-analyzer
+pnpm add -D webpack-bundle-analyzer
 
 # Analyze bundle composition
-npm run build
-npx webpack-bundle-analyzer .next/static/chunks/*.js
+pnpm build
+pnpm dlx webpack-bundle-analyzer .next/static/chunks/*.js
 
 # Alternative: Use source-map-explorer
-npm install --save-dev source-map-explorer
-npm run build && npx source-map-explorer 'build/static/js/*.js'
+pnpm add -D source-map-explorer
+pnpm build && pnpm dlx source-map-explorer 'build/static/js/*.js'
 ```
 
 ### Tree Shaking Optimization

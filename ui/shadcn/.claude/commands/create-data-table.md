@@ -220,8 +220,8 @@ If the user says: `/create-data-table users`
 
 1. Install dependencies:
 ```bash
-npm install @tanstack/react-table
-npx shadcn@latest add table button input dropdown-menu checkbox
+pnpm add @tanstack/react-table
+pnpm dlx shadcn@latest add table button input dropdown-menu checkbox
 ```
 
 2. Create column definitions for users table

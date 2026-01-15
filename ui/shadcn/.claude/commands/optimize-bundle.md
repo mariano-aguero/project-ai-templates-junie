@@ -19,7 +19,7 @@ Analyze bundle size and optimize for production.
 ### Next.js
 ```bash
 # Install bundle analyzer
-npm install -D @next/bundle-analyzer
+pnpm add -D @next/bundle-analyzer
 
 # Configure next.config.js
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -31,13 +31,13 @@ module.exports = withBundleAnalyzer({
 })
 
 # Run analysis
-ANALYZE=true npm run build
+ANALYZE=true pnpm build
 ```
 
 ### Vite
 ```bash
 # Install rollup plugin
-npm install -D rollup-plugin-visualizer
+pnpm add -D rollup-plugin-visualizer
 
 # Add to vite.config.ts
 import { visualizer } from 'rollup-plugin-visualizer'
@@ -51,18 +51,18 @@ plugins: [
 ]
 
 # Run build
-npm run build
+pnpm build
 ```
 
 ### General
 ```bash
 # webpack-bundle-analyzer
-npm install -D webpack-bundle-analyzer
+pnpm add -D webpack-bundle-analyzer
 
 # source-map-explorer
-npm install -D source-map-explorer
-npm run build
-npx source-map-explorer 'build/static/js/*.js'
+pnpm add -D source-map-explorer
+pnpm build
+pnpm dlx source-map-explorer 'build/static/js/*.js'
 ```
 
 ## Optimization Strategies
