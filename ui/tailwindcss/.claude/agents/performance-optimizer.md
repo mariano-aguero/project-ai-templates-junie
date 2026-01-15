@@ -359,19 +359,19 @@ if (process.env.NODE_ENV === 'development') {
 
 ```bash
 # Analyze bundle size
-npx tailwindcss -i ./src/styles.css -o ./dist/output.css --minify
+pnpm dlx tailwindcss -i ./src/styles.css -o ./dist/output.css --minify
 wc -c ./dist/output.css
 
 # Compress with Brotli
 brotli -q 11 ./dist/output.css
 
 # Analyze with webpack-bundle-analyzer
-npm install --save-dev webpack-bundle-analyzer
-npx webpack-bundle-analyzer dist/static/js/*.js
+pnpm add -D webpack-bundle-analyzer
+pnpm dlx webpack-bundle-analyzer dist/static/js/*.js
 
 # Check for unused CSS
-npm install --save-dev purgecss
-npx purgecss --css dist/output.css --content src/**/*.js --output dist/
+pnpm add -D purgecss
+pnpm dlx purgecss --css dist/output.css --content src/**/*.js --output dist/
 ```
 
 ### Performance Metrics

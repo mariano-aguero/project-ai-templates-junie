@@ -42,10 +42,10 @@ This command helps you add, configure, and optimize TailwindCSS plugins to exten
 
 ```bash
 # Install typography plugin
-npm install -D @tailwindcss/typography
+pnpm add -D @tailwindcss/typography
 
 # Or with yarn
-yarn add -D @tailwindcss/typography
+pnpm add -D @tailwindcss/typography
 ```
 
 #### Configuration
@@ -219,7 +219,7 @@ module.exports = {
 
 ```bash
 # Install forms plugin
-npm install -D @tailwindcss/forms
+pnpm add -D @tailwindcss/forms
 ```
 
 #### Configuration
@@ -309,7 +309,7 @@ module.exports = {
 
 ```bash
 # Install aspect ratio plugin
-npm install -D @tailwindcss/aspect-ratio
+pnpm add -D @tailwindcss/aspect-ratio
 ```
 
 #### Configuration
@@ -380,7 +380,7 @@ module.exports = {
 
 ```bash
 # Install container queries plugin
-npm install -D @tailwindcss/container-queries
+pnpm add -D @tailwindcss/container-queries
 ```
 
 #### Configuration
@@ -448,7 +448,7 @@ module.exports = {
 
 ```bash
 # Install line clamp plugin (now built into Tailwind v3.3+)
-npm install -D @tailwindcss/line-clamp
+pnpm add -D @tailwindcss/line-clamp
 ```
 
 #### Usage Examples
@@ -479,7 +479,7 @@ npm install -D @tailwindcss/line-clamp
 
 ```bash
 # Install animations plugin
-npm install -D tailwindcss-animate
+pnpm add -D tailwindcss-animate
 ```
 
 #### Configuration
@@ -531,7 +531,7 @@ module.exports = {
 
 ```bash
 # Install debug plugin (development only)
-npm install -D tailwindcss-debug-screens
+pnpm add -D tailwindcss-debug-screens
 ```
 
 #### Configuration

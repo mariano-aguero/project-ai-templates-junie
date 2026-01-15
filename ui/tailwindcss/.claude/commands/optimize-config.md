@@ -36,11 +36,11 @@ This command analyzes and optimizes your TailwindCSS setup for maximum performan
 
 ```bash
 # Build CSS and analyze size
-npx tailwindcss -i ./src/styles.css -o ./dist/output.css
+pnpm dlx tailwindcss -i ./src/styles.css -o ./dist/output.css
 wc -c ./dist/output.css
 
 # With minification
-npx tailwindcss -i ./src/styles.css -o ./dist/output.css --minify
+pnpm dlx tailwindcss -i ./src/styles.css -o ./dist/output.css --minify
 wc -c ./dist/output.css
 
 # Compress with Brotli
@@ -295,7 +295,7 @@ analyzeCSSBundle(process.argv[2])
 
 ```bash
 # Using PurgeCSS to find unused CSS
-npm install -g purgecss
+pnpm add -g purgecss
 
 # Analyze unused CSS
 purgecss --css dist/styles.css \
@@ -331,10 +331,10 @@ jobs:
           cache: 'npm'
       
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
       
       - name: Build CSS
-        run: npm run build:css
+        run: pnpm build:css
       
       - name: Check bundle size
         run: |
@@ -370,7 +370,7 @@ jobs:
 # .husky/pre-commit
 
 # Build CSS and check size
-npm run build:css
+pnpm build:css
 
 # Check if CSS file is too large
 SIZE=$(wc -c < dist/styles.css)

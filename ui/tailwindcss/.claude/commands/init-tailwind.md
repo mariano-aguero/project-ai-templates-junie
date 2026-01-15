@@ -31,10 +31,10 @@ This command sets up a new TailwindCSS project with best practices and optimal c
 
 ```bash
 # Install TailwindCSS for Next.js
-npm install -D tailwindcss postcss autoprefixer @tailwindcss/typography @tailwindcss/forms @tailwindcss/aspect-ratio
+pnpm add -D tailwindcss postcss autoprefixer @tailwindcss/typography @tailwindcss/forms @tailwindcss/aspect-ratio
 
 # Generate config files
-npx tailwindcss init -p
+pnpm dlx tailwindcss init -p
 
 # Configure for Next.js paths
 ```
@@ -43,10 +43,10 @@ npx tailwindcss init -p
 
 ```bash
 # Install TailwindCSS for Vite
-npm install -D tailwindcss postcss autoprefixer @tailwindcss/typography @tailwindcss/forms
+pnpm add -D tailwindcss postcss autoprefixer @tailwindcss/typography @tailwindcss/forms
 
 # Generate config
-npx tailwindcss init -p
+pnpm dlx tailwindcss init -p
 
 # Configure for React/Vite paths
 ```
@@ -55,13 +55,13 @@ npx tailwindcss init -p
 
 ```bash
 # Install TailwindCSS CLI
-npm install -D tailwindcss
+pnpm add -D tailwindcss
 
 # Generate config
-npx tailwindcss init
+pnpm dlx tailwindcss init
 
 # Build CSS file
-npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+pnpm dlx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 ```
 
 ## Configuration Templates

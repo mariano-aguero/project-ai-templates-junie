@@ -499,14 +499,14 @@ jobs:
           cache: 'npm'
       
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
       
       - name: Run TailwindCSS usage analysis
         run: node scripts/analyze-tailwind-usage.js
       
       - name: Generate size analysis
         run: |
-          npm run build:css
+          pnpm build:css
           node scripts/analyze-bundle-size.js dist/styles.css > bundle-size-report.txt
       
       - name: Comment PR with analysis

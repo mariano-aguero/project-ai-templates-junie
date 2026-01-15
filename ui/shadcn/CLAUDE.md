@@ -133,8 +133,8 @@ export { Component, ComponentTrigger, ComponentContent }
 
 ```bash
 # CLI installation (recommended)
-npx shadcn@latest init
-npx shadcn@latest add [component]
+pnpm dlx shadcn@latest init
+pnpm dlx shadcn@latest add [component]
 
 # Manual installation
 # 1. Install dependencies

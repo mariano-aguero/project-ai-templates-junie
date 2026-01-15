@@ -29,7 +29,7 @@ chmod +x your-project/.claude/hooks/*.sh
 2. Initialize shadcn/ui in your project (if not already done):
 
 ```bash
-npx shadcn@latest init
+pnpm dlx shadcn@latest init
 ```
 
 3. The configuration will be automatically loaded when you start Claude Code.
@@ -361,7 +361,7 @@ const buttonVariants = cva(
 **Components not styling correctly:**
 ```bash
 # Verify Tailwind configuration
-npx shadcn@latest init
+pnpm dlx shadcn@latest init
 
 # Check CSS import
 # Ensure globals.css is imported in your app
@@ -391,18 +391,18 @@ npx shadcn@latest init
 
 ```bash
 # 1. Initialize a new Next.js project
-npx create-next-app@latest my-app --typescript --tailwind
+pnpm dlx create-next-app@latest my-app --typescript --tailwind
 
 # 2. Initialize shadcn/ui
 cd my-app
-npx shadcn@latest init
+pnpm dlx shadcn@latest init
 
 # 3. Copy Claude configuration
 cp -r path/to/shadcn/.claude .
 cp path/to/shadcn/CLAUDE.md .
 
 # 4. Add your first components
-npx shadcn@latest add button card form
+pnpm dlx shadcn@latest add button card form
 
 # 5. Start developing with Claude Code
 # Claude now has full shadcn/ui expertise!
