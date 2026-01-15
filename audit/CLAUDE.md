@@ -27,6 +27,9 @@ This CLAUDE.md follows Claude Code memory management patterns:
 - `/audit-report` - Generate a skeleton for a professional audit report
 - `/audit-finding [H|M|L]` - Draft a finding with High, Medium, or Low severity
 - `/audit-executive` - Generate an executive summary of the audit status
+- `/format` - Format code with Prettier
+- `/lint` - Run ESLint
+- `/commit` - Generate a conventional commit message
 
 ## Audit Methodology
 
@@ -87,5 +90,9 @@ Every professional report generated must include:
 - [Crytic (Trail of Bits) Documentation](https://github.com/crytic)
 - [Foundry Invariant Testing](https://book.getfoundry.sh/forge/invariant-testing)
 - [RareSkills Smart Contract Security](https://www.rareskills.io/smart-contract-security)
+
+## Git & Commit Standards
+- **Standard**: Follow [Conventional Commits](https://www.conventionalcommits.org/).
+- **Tools**: Use `commitlint`, `husky`, and `commitizen` for consistent and valid history.
 
 Remember: **Don't trust, verify! Every line of code is a potential attack vector.**

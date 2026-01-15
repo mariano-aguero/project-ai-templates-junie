@@ -17,10 +17,31 @@
     "abitype": "^1.x"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.x",
+    "@commitlint/config-conventional": "^19.x",
+    "commitizen": "^4.x",
+    "cz-conventional-changelog": "^3.x",
+    "husky": "^9.x",
+    "prettier": "^3.x",
+    "eslint": "^9.x",
+    "@typescript-eslint/eslint-plugin": "^8.x",
+    "@typescript-eslint/parser": "^8.x",
+    "eslint-config-prettier": "^9.x",
     "hardhat": "^2.x",
     "@nomicfoundation/hardhat-toolbox": "^5.x",
     "@openzeppelin/contracts": "^5.x",
     "prettier-plugin-solidity": "^1.x",
     "solhint": "^5.x"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .ts,.tsx",
+    "commit": "cz",
+    "prepare": "husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

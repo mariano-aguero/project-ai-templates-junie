@@ -21,6 +21,9 @@ Project-specific slash commands for shadcn/ui development:
 - `/shadcn-custom [name]` - Create custom component following patterns
 - `/shadcn-compose [components]` - Compose complex component from primitives
 - `/shadcn-test [component]` - Generate accessibility and unit tests
+- `/format` - Format code with Prettier
+- `/lint` - Run ESLint
+- `/commit` - Generate a conventional commit message
 
 ## Project Context
 
@@ -467,6 +470,9 @@ npm run dev
 # Type checking
 npm run type-check
 
+# Format code with Prettier
+npm run format
+
 # Linting
 npm run lint
 
@@ -475,7 +481,14 @@ npm run test
 
 # Build
 npm run build
+
+# Commit
+npm run commit  # Interactive commit using commitizen
 ```
+
+## Git & Commit Standards
+- **Standard**: Follow [Conventional Commits](https://www.conventionalcommits.org/).
+- **Tools**: Use `commitlint`, `husky`, and `commitizen` for consistent and valid history.
 
 ## Performance Optimization
 

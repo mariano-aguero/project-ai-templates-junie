@@ -44,10 +44,32 @@
   },
   "scripts": {
     "validate": "node -e \"console.log('✅ Configuration is valid')\"",
-    "info": "node -e \"console.log(JSON.stringify(require('./package.json')['claude-config'], null, 2))\""
+    "info": "node -e \"console.log(JSON.stringify(require('./package.json')['claude-config'], null, 2))\"",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .ts,.tsx",
+    "commit": "cz",
+    "prepare": "husky install"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^19.x",
+    "@commitlint/config-conventional": "^19.x",
+    "commitizen": "^4.x",
+    "cz-conventional-changelog": "^3.x",
+    "husky": "^9.x",
+    "prettier": "^3.x",
+    "eslint": "^9.x",
+    "@typescript-eslint/eslint-plugin": "^8.x",
+    "@typescript-eslint/parser": "^8.x",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.x",
+    "eslint-plugin-react-hooks": "^5.x"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",

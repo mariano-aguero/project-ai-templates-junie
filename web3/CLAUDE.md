@@ -29,6 +29,9 @@ This CLAUDE.md follows Claude Code memory management patterns:
 - `/w3-simulate [fn]` - Scaffolding for transaction simulation before execution
 - `/w3-aa` - Scaffolding for ERC-4337 Account Abstraction (UserOps)
 - `/w3-multicall` - Generate batch read patterns using multicall
+- `/format` - Format code with Prettier
+- `/lint` - Run ESLint
+- `/commit` - Generate a conventional commit message
 
 ## Professional Web3 & Solidity Architecture
 
@@ -167,5 +170,9 @@ Implement Sign-In with Ethereum for secure, gasless identity verification:
 - [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/)
 - [Solidity Documentation](https://docs.soliditylang.org/)
 - [Blockscout MCP](https://mcp.blockscout.com/)
+
+## Git & Commit Standards
+- **Standard**: Follow [Conventional Commits](https://www.conventionalcommits.org/).
+- **Tools**: Use `commitlint`, `husky`, and `commitizen` for consistent and valid history.
 
 Remember: **Decentralized, Typed, Secure, and Gas-Efficient!**

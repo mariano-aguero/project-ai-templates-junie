@@ -25,7 +25,7 @@ At the root of the project is the **[skills.md](./skills.md)** file. This file c
 
 To integrate these skills into your project:
 
-1. Copy the `skills.md` file to the root of your project.
+1. Copy the `skills.md` and `.prettierrc` files to the root of your project.
 2. Copy the template directory you need (e.g., `nextjs/`) or simply its `CLAUDE.md` file to the corresponding subdirectory of your project.
 3. The AI assistant will automatically detect these configurations and adjust its behavior and code suggestions to the defined standards.
 
@@ -34,7 +34,7 @@ To integrate these skills into your project:
 - **Frontend**: Next.js 15, React 19, Tailwind CSS, shadcn/ui.
 - **Web3**: Solidity, Foundry, Hardhat, Viem, Wagmi, AppKit.
 - **Backend**: PostgreSQL, Redis, GraphQL, Prisma, BullMQ.
-- **Tools**: Zod, TypeScript 5, Slither, Aderyn.
+- **Tools**: Zod, TypeScript 5, ESLint, Prettier, Slither, Aderyn, Commitlint, Husky.
 
 ## 👤 Author
 

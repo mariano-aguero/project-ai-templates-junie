@@ -21,6 +21,9 @@ Project-specific slash commands for Tailwind development:
 - `/tw-theme [section]` - Update tailwind.config.js theme
 - `/tw-plugin [name]` - Add and configure Tailwind plugin
 - `/tw-optimize` - Analyze and optimize CSS bundle size
+- `/format` - Format code with Prettier
+- `/lint` - Run ESLint
+- `/commit` - Generate a conventional commit message
 
 ## Project Context
 
@@ -801,5 +804,9 @@ module.exports = {
 - [Heroicons](https://heroicons.com)
 - [Tailwind Play](https://play.tailwindcss.com)
 - [Tailwind Community](https://github.com/tailwindlabs/tailwindcss/discussions)
+
+## Git & Commit Standards
+- **Standard**: Follow [Conventional Commits](https://www.conventionalcommits.org/).
+- **Tools**: Use `commitlint`, `husky`, and `commitizen` for consistent and valid history.
 
 Remember: **Utility-first, mobile-first, performance-first. Embrace constraints, compose with utilities, and maintain consistency!**

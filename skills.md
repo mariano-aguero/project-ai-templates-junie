@@ -80,10 +80,17 @@ Build flexible components using the Radix UI/shadcn pattern:
 - **Web3 Security**: Always simulate transactions, use access control (Ownable/AccessControl), and implement reentrancy guards in contracts.
 - **Rate Limiting**: Implement rate limiting on API routes to prevent brute force and DoS.
 
-### 🎨 Styling & Layout
+### 🎨 Styling, Layout, Formatting & Linting
+- **Formatting & Linting**: Mandatory use of **ESLint** combined with **Prettier**. ESLint handles code quality and logic rules, while Prettier handles formatting and indentation (2 spaces).
+- **Integration**: Use `eslint-config-prettier` to disable ESLint rules that might conflict with Prettier. All style issues should be surfaced through the linter.
 - **Responsiveness**: Mobile-first approach. Use **Container Queries** (`@container`) for component-level layouts.
 - **I18n-Ready**: Use Logical Properties (`ms-*`, `me-*`, `ps-*`, `pe-*`) instead of physical ones (`ml-*`, `mr-*`).
 - **Icons**: Standardize on **Lucide React**.
+
+### 📝 Git & Commit Standards
+- **Conventional Commits**: Mandatory use of the [Conventional Commits](https://www.conventionalcommits.org/) specification (e.g., `feat:`, `fix:`, `docs:`, `refactor:`, `chore:`).
+- **Tooling**: Use **commitlint** to enforce rules, **husky** for git hooks, and **commitizen** for interactive commit creation.
+- **Atomic Commits**: Each commit should represent a single, logical change.
 
 ---
 
@@ -95,6 +102,7 @@ Build flexible components using the Radix UI/shadcn pattern:
 - [ ] Is the loading state handled with Suspense + Skeleton?
 - [ ] Is the component accessible (ARIA, Keyboard)?
 - [ ] Is the folder structure following the Feature-based pattern?
+- [ ] Is the code formatted with Prettier and linted with ESLint?
 - [ ] Are database queries optimized (no N+1)?
 - [ ] Is Redis caching implemented for hot data?
 - [ ] Is the GraphQL schema type-safe and validated?
@@ -103,6 +111,8 @@ Build flexible components using the Radix UI/shadcn pattern:
 - [ ] Is there a formal audit report for critical security findings?
 - [ ] Does the code strictly follow the Check-Effects-Interactions pattern?
 - [ ] Are we using audited standards (OpenZeppelin) for Web3?
+- [ ] Does the commit message follow Conventional Commits?
+- [ ] Are all linter errors resolved?
 
 ---
 

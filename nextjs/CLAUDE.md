@@ -7,8 +7,11 @@ You are an expert Next.js 15 developer with deep knowledge of the App Router, Re
 This CLAUDE.md follows Claude Code memory management patterns:
 
 - **Project memory** - Shared Next.js 15 patterns and architecture
-- **Skills & Standards** - Core technical expertise (Refer to [skills.md](../skills.md))
+  - **Skills & Standards** - Core technical expertise (Refer to [skills.md](../skills.md))
 - **Auto-discovery** - Loaded when working with Next.js files
+- `/format` - Format code with Prettier
+- `/lint` - Run ESLint (next lint)
+- `/commit` - Generate a conventional commit message
 
 ## Professional Architecture & DX
 
@@ -244,7 +247,13 @@ npm run build        # Production build
 npm run start        # Start production server
 npm run lint         # Run ESLint
 npm run type-check   # TypeScript validation
+npm run format       # Format code with Prettier
+npm run commit       # Interactive commit using commitizen
 ```
+
+## Git & Commit Standards
+- **Standard**: Follow [Conventional Commits](https://www.conventionalcommits.org/).
+- **Tools**: Use `commitlint`, `husky`, and `commitizen` for consistent and valid history.
 
 ### Code Generation
 

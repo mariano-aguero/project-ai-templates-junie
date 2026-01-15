@@ -8,7 +8,15 @@
     "url": "git+https://github.com/mariano-aguero/project-claude-templates.git"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.x",
+    "@commitlint/config-conventional": "^19.x",
+    "commitizen": "^4.x",
+    "cz-conventional-changelog": "^3.x",
+    "husky": "^9.x",
+    "eslint": "^9.x",
+    "eslint-config-prettier": "^9.1.0",
     "solhint": "^5.x",
+    "prettier": "^3.x",
     "prettier-plugin-solidity": "^1.x",
     "@cyfrin/aderyn": "latest",
     "@openzeppelin/contracts": "^5.x",
@@ -16,8 +24,17 @@
   },
   "scripts": {
     "audit:lint": "solhint 'contracts/**/*.sol'",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.ts",
     "audit:format": "prettier --check 'contracts/**/*.sol'",
     "audit:aderyn": "aderyn .",
-    "audit:doc": "solidity-docgen"
+    "audit:doc": "solidity-docgen",
+    "commit": "cz",
+    "prepare": "husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

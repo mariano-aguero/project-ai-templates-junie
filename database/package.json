@@ -20,7 +20,28 @@
     "zod": "^3.x"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.x",
+    "@commitlint/config-conventional": "^19.x",
+    "commitizen": "^4.x",
+    "cz-conventional-changelog": "^3.x",
+    "husky": "^9.x",
+    "prettier": "^3.x",
+    "eslint": "^9.x",
+    "@typescript-eslint/eslint-plugin": "^8.x",
+    "@typescript-eslint/parser": "^8.x",
+    "eslint-config-prettier": "^9.1.0",
     "typescript": "^5.x",
     "@types/node": "^20.x"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .ts",
+    "commit": "cz",
+    "prepare": "husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

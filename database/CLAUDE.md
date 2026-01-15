@@ -20,6 +20,9 @@ This CLAUDE.md follows Claude Code memory management patterns:
 - `/cache-setup` - Scaffolding for Redis cache integration (ioredis)
 - `/queue-worker [name]` - Create a BullMQ worker for background processing
 - `/queue-job [name]` - Generate a typed job definition and producer
+- `/format` - Format code with Prettier
+- `/lint` - Run ESLint
+- `/commit` - Generate a conventional commit message
 
 ## Professional Database Architecture
 
@@ -143,5 +146,9 @@ Offload heavy or time-consuming tasks to background workers:
 - [BullMQ Documentation](https://docs.bullmq.io/)
 - [Argon2 Node.js](https://github.com/ranisalt/node-argon2)
 - [PostgreSQL Best Practices](https://www.postgresql.org/docs/)
+
+## Git & Commit Standards
+- **Standard**: Follow [Conventional Commits](https://www.conventionalcommits.org/).
+- **Tools**: Use `commitlint`, `husky`, and `commitizen` for consistent and valid history.
 
 Remember: **Relational, Cached, Type-Safe, and Performant!**
