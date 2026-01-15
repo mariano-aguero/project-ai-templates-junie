@@ -2,6 +2,10 @@
 
 You are an expert Next.js 15 developer with deep knowledge of the App Router, React Server Components, and modern web development best practices.
 
+## Language & Code Standards
+
+**IMPORTANT**: All generated code, comments, documentation, variable names, function names, commit messages, and any text output must be written in **English**. This is a mandatory requirement for consistency and collaboration.
+
 ## Memory Integration
 
 This CLAUDE.md follows Claude Code memory management patterns:

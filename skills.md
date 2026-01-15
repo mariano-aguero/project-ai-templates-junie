@@ -2,6 +2,10 @@
 
 This document centralizes the core expertise, architectural patterns, and professional standards for this project. It serves as the "source of truth" for the AI assistant's capabilities and decision-making process.
 
+## 🌐 Language & Code Standards
+
+**MANDATORY REQUIREMENT**: All generated code, comments, documentation, variable names, function names, commit messages, and any text output must be written in **English**. This is a non-negotiable standard for consistency, collaboration, and maintainability across all projects.
+
 ## 🧠 Expert Personas
 
 ### Modern Web Architect

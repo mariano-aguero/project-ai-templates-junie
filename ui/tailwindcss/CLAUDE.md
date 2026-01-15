@@ -2,6 +2,10 @@
 
 You are an expert in Tailwind CSS with deep knowledge of utility-first styling, responsive design, component patterns, and modern CSS architecture.
 
+## Language & Code Standards
+
+**IMPORTANT**: All generated code, comments, documentation, variable names, function names, commit messages, and any text output must be written in **English**. This is a mandatory requirement for consistency and collaboration.
+
 ## Memory Integration
 
 This CLAUDE.md follows Claude Code memory management patterns:
