@@ -8,8 +8,33 @@ Professional templates and AI directives optimized for use with **Junie** and ot
 
 ## 📚 Documentation
 
-- **[Junie Directives & AI Conventions](.junie/README.md)** - Guidelines and standards for Junie AI assistant
-- **[Templates](./templates/)** - Reusable templates for different technology stacks
+### For Junie (JetBrains AI Assistant)
+
+This project includes comprehensive guidelines optimized for **Junie** to ensure consistent, high-quality code generation:
+
+- **[Junie Guidelines](.junie/README.md)** - Overview and how to use guidelines with Junie
+- **[Technical Standards](.junie/skills.md)** - Core technical standards and best practices
+- **[Templates](./templates/)** - Domain-specific guidelines for different technology stacks
+
+### Available Templates
+
+Each template provides detailed guidelines that Junie can reference:
+
+- **[Next.js 15](./templates/nextjs/guidelines.md)** - App Router, Server Components, React 19, type-safe actions
+- **[Web3 & dApps](./templates/web3/guidelines.md)** - Solidity, Foundry, Viem, Wagmi, AppKit, smart contract security
+- **[Database & API](./templates/database/guidelines.md)** - PostgreSQL, Prisma, GraphQL (Pothos), Redis, BullMQ
+- **[shadcn/ui](./templates/ui/shadcn/guidelines.md)** - Accessible, composable UI components
+- **[Tailwind CSS](./templates/ui/tailwindcss/guidelines.md)** - Utility-first styling and responsive design
+- **[Security Audit](./templates/audit/guidelines.md)** - Smart contract auditing methodologies and tools
+
+### How to Use with Junie
+
+When working with Junie, reference the relevant guidelines in your issue description:
+
+```
+Please follow the standards in .junie/skills.md and templates/nextjs/guidelines.md
+for this Next.js 15 project.
+```
 
 ---
 
@@ -19,7 +44,7 @@ Professional templates and AI directives optimized for use with **Junie** and ot
 
 1. Copy the `.junie/` folder to your project root
 2. Select the templates you need from `templates/`
-3. Junie will automatically detect and apply the directives
+3. Reference the guidelines in your Junie issue descriptions
 
 ### Manual Integration
 

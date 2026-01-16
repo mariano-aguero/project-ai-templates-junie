@@ -1,18 +1,21 @@
-# AI Directives for Junie 🤖
+# Junie Guidelines 🤖
 
-This directory contains professional directives and standards designed to optimize the workflow with **Junie** and other AI coding assistants.
+This directory contains professional guidelines and standards designed to optimize the workflow with **Junie** (JetBrains AI Assistant).
 
-The goal is to provide AI assistants with rich context, senior-level technical standards, and modern architectural patterns to generate high-quality, secure, and scalable code.
+The goal is to provide Junie with rich context, senior-level technical standards, and modern architectural patterns to generate high-quality, secure, and scalable code.
 
 ## 📂 Project Structure
 
-The repository is organized into specialized modules, each with its own memory configuration (`CLAUDE.md`) and standards:
+The repository is organized into specialized templates, each with its own guidelines optimized for Junie:
 
-- **[Next.js 15](../templates/nextjs)**: Feature-based architecture, App Router, Server Components, and strict validation.
-- **[Web3 & dApps](../templates/web3)**: Smart contract development (Solidity), AppKit/Wagmi/Viem integration, and on-chain security.
-- **[Database & API](../templates/database)**: Data layer with PostgreSQL, Prisma, GraphQL (Pothos), Redis, and BullMQ.
-- **[UI & Styling](../templates/ui)**: Consistent components with **shadcn/ui** and **Tailwind CSS**.
-- **[Security Audit](../templates/audit)**: Methodologies and tools for smart contract security auditing.
+- **[Next.js 15](../templates/nextjs/guidelines.md)**: Feature-based architecture, App Router, Server Components, and strict validation.
+- **[Web3 & dApps](../templates/web3/guidelines.md)**: Smart contract development (Solidity), AppKit/Wagmi/Viem integration, and on-chain security.
+- **[Database & API](../templates/database/guidelines.md)**: Data layer with PostgreSQL, Prisma, GraphQL (Pothos), Redis, and BullMQ.
+- **[shadcn/ui](../templates/ui/shadcn/guidelines.md)**: Accessible, composable UI components with Radix UI.
+- **[Tailwind CSS](../templates/ui/tailwindcss/guidelines.md)**: Utility-first styling and responsive design patterns.
+- **[Security Audit](../templates/audit/guidelines.md)**: Methodologies and tools for smart contract security auditing.
+
+> **Note**: Each template also includes a `CLAUDE.md` file for compatibility with Claude Code, but the `guidelines.md` files are specifically optimized for Junie.
 
 ## 🧠 The Heart: `skills.md`
 
