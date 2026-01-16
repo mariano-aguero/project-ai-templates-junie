@@ -1,10 +1,6 @@
-# Developer Skills & Professional Standards
+# Developer Skills & Technical Capabilities
 
-This document centralizes the core expertise, architectural patterns, and professional standards for this project. It serves as the "source of truth" for the AI assistant's capabilities and decision-making process.
-
-## 🌐 Language & Code Standards
-
-**MANDATORY REQUIREMENT**: All generated code, comments, documentation, variable names, function names, commit messages, and any text output must be written in **English**. This is a non-negotiable standard for consistency, collaboration, and maintainability across all projects.
+This document defines the technical expertise, architectural patterns, and domain-specific capabilities available to AI assistants. For behavioral rules and workflow standards, see [guidelines.md](./guidelines.md).
 
 ## 🧠 Expert Personas
 
@@ -97,44 +93,43 @@ Build flexible components using the Radix UI/shadcn pattern:
   - Restart TypeScript server in IDE after configuration changes.
   - Verify all required type definition files exist before starting development.
 
-### 🎨 Styling, Layout, Formatting & Linting
-- **Formatting & Linting**: Mandatory use of **ESLint** combined with **Prettier**. ESLint handles code quality and logic rules, while Prettier handles formatting and indentation (2 spaces).
-- **Integration**: Use `eslint-config-prettier` to disable ESLint rules that might conflict with Prettier. All style issues should be surfaced through the linter.
+### 🎨 Styling & Layout
 - **Responsiveness**: Mobile-first approach. Use **Container Queries** (`@container`) for component-level layouts.
 - **I18n-Ready**: Use Logical Properties (`ms-*`, `me-*`, `ps-*`, `pe-*`) instead of physical ones (`ml-*`, `mr-*`).
 - **Icons**: Standardize on **Lucide React**.
 
-### 📝 Git & Commit Standards
-- **Conventional Commits**: Mandatory use of the [Conventional Commits](https://www.conventionalcommits.org/) specification (e.g., `feat:`, `fix:`, `docs:`, `refactor:`, `chore:`).
-- **Tooling**: Use **commitlint** to enforce rules, **husky** for git hooks, and **commitizen** for interactive commit creation.
-- **Atomic Commits**: Each commit should represent a single, logical change.
-
 ---
 
-## ✅ Best Practices Checklist
+## ✅ Technical Quality Checklist
 
+### Architecture & Structure
 - [ ] Is this a Server Component by default?
-- [ ] Does this Server Action validate input with Zod?
-- [ ] Are we using semantic colors (e.g., `text-muted-foreground`)?
-- [ ] Is the loading state handled with Suspense + Skeleton?
-- [ ] Is the component accessible (ARIA, Keyboard)?
 - [ ] Is the folder structure following the Feature-based pattern?
-- [ ] Is the code formatted with Prettier and linted with ESLint?
+- [ ] Is the component accessible (ARIA, Keyboard)?
+
+### Type Safety & Validation
+- [ ] Does this Server Action validate input with Zod?
 - [ ] Are all TypeScript configuration files present and correct?
 - [ ] Does `next-env.d.ts` exist in the project root (Next.js projects)?
 - [ ] Are all required `@types/*` packages installed and version-matched?
 - [ ] Is TypeScript strict mode enabled (`strict: true`)?
 - [ ] Are there no TypeScript errors (especially TS7026 JSX errors)?
+
+### UI & Styling
+- [ ] Are we using semantic colors (e.g., `text-muted-foreground`)?
+- [ ] Is the loading state handled with Suspense + Skeleton?
+
+### Data & Performance
 - [ ] Are database queries optimized (no N+1)?
 - [ ] Is Redis caching implemented for hot data?
 - [ ] Is the GraphQL schema type-safe and validated?
+
+### Web3 & Security
 - [ ] Are smart contracts tested with Foundry/Hardhat (high coverage)?
 - [ ] Have all smart contract invariants been identified and tested?
 - [ ] Is there a formal audit report for critical security findings?
 - [ ] Does the code strictly follow the Check-Effects-Interactions pattern?
 - [ ] Are we using audited standards (OpenZeppelin) for Web3?
-- [ ] Does the commit message follow Conventional Commits?
-- [ ] Are all linter errors resolved?
 
 ---
 
