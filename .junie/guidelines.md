@@ -73,29 +73,29 @@ templates/
 
 ## 📦 Package Management
 
-### Yarn is Mandatory
+### pnpm is Mandatory
 
-**RULE**: Always use `yarn` for dependency management. Never use `npm` or `pnpm`.
+**RULE**: Always use `pnpm` for dependency management. Never use `npm` or `yarn`.
 
 **Commands**:
 ```bash
 # Install dependencies
-yarn install
+pnpm install
 
 # Add a dependency
-yarn add <package-name>
+pnpm add <package-name>
 
 # Add a dev dependency
-yarn add -D <package-name>
+pnpm add -D <package-name>
 
 # Remove a dependency
-yarn remove <package-name>
+pnpm remove <package-name>
 
 # Run scripts
-yarn <script-name>
+pnpm <script-name>
 ```
 
-**Rationale**: Consistency across the project and all templates. Yarn provides deterministic installs and better workspace support.
+**Rationale**: Consistency across the project and all templates. pnpm provides fast, disk-efficient installs and excellent workspace support.
 
 ---
 
@@ -127,7 +127,7 @@ All code MUST follow the Prettier configuration defined in `.prettierrc`:
 - ✅ **Parentheses around arrow function parameters** `(x) => x * 2`
 
 **Enforcement**:
-- Run `yarn format` or `prettier --write .` before committing
+- Run `pnpm format` or `prettier --write .` before committing
 - Configure your IDE to format on save using this Prettier config
 - All code must pass Prettier checks in CI/CD
 
@@ -268,7 +268,7 @@ export const createUserAction = action(createUserSchema, async (input) => {
 Before submitting any code, verify:
 
 - [ ] Searched `templates/` for existing patterns
-- [ ] Used `yarn` for all package management
+- [ ] Used `pnpm` for all package management
 - [ ] Code follows Prettier configuration (`.prettierrc`)
 - [ ] All ESLint errors resolved
 - [ ] TypeScript strict mode enabled and no errors
@@ -300,7 +300,7 @@ Before submitting any code, verify:
 
 ### When Completing a Task
 
-1. **Run linters and formatters** (`yarn lint`, `yarn format`)
+1. **Run linters and formatters** (`pnpm lint`, `pnpm format`)
 2. **Test your changes** (manual or automated)
 3. **Review your code** against the checklist
 4. **Write a Conventional Commit message**

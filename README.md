@@ -44,7 +44,7 @@ All AI assistant behavior and knowledge is centralized in the **`.junie/`** dire
 
 **Key Features**:
 - 🔍 **Template-First Mandate**: AI always searches existing templates before writing new code
-- 📦 **Yarn-Only Policy**: Consistent package management across all projects
+- 📦 **pnpm-Only Policy**: Consistent package management across all projects
 - 🎨 **Prettier Standards**: Automated code formatting with project-wide configuration
 - 🔒 **Security-First**: Mandatory input validation, type safety, and best practices
 - 🌐 **English-Only**: All code, comments, and documentation in English for global collaboration
@@ -112,9 +112,9 @@ cp .prettierrc /path/to/your/project/
 cp -r templates/nextjs /path/to/your/project/
 cp -r templates/web3 /path/to/your/project/
 
-# Install dependencies (always use yarn)
+# Install dependencies (always use pnpm)
 cd /path/to/your/project/
-yarn install
+pnpm install
 ```
 
 ### Option 3: Cherry-Pick Components

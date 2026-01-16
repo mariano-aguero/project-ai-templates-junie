@@ -21,7 +21,7 @@ Together, these files provide AI assistants with the context needed to generate 
 
 **Contains**:
 - **Template-First Approach**: Mandatory rule to search `templates/` before writing new code
-- **Package Management**: Yarn usage requirements and commands
+- **Package Management**: pnpm usage requirements and commands
 - **Code Formatting**: Prettier configuration standards (`.prettierrc`)
 - **Code Quality**: ESLint integration and TypeScript standards
 - **Language Standards**: English-only requirement for all code and documentation
@@ -127,7 +127,7 @@ Always search `templates/` directory before proposing new code. Reuse and adapt 
 - **Domain patterns** → `templates/*/guidelines.md`
 
 ### Consistency
-- Use **Yarn** for package management
+- Use **pnpm** for package management
 - Follow **Prettier** configuration (`.prettierrc`)
 - Write all code in **English**
 - Use **Conventional Commits** for git messages

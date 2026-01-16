@@ -43,9 +43,6 @@ This command helps you add, configure, and optimize TailwindCSS plugins to exten
 ```bash
 # Install typography plugin
 pnpm add -D @tailwindcss/typography
-
-# Or with yarn
-pnpm add -D @tailwindcss/typography
 ```
 
 #### Configuration
