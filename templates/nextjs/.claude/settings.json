@@ -61,10 +61,10 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "echo '[Next.js 15] $(basename $(pwd))'"
+    "command": "echo '[Next.js 16] $(basename $(pwd))'"
   },
   "_metadata": {
-    "name": "Next.js 15",
+    "name": "Next.js 16",
     "version": "1.0.0",
     "category": "framework",
     "generated": "2025-08-20T13:36:56.329Z",

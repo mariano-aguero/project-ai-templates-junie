@@ -567,7 +567,7 @@ export const AllVariants = () => (
 
 This configuration works seamlessly with:
 
-- **Next.js 15** - App Router and Server Components styling
+- **Next.js 16** - App Router and Server Components styling
 - **React/Vue/Svelte** - Component-based architectures
 - **shadcn/ui** - Pre-built accessible components
 - **Headless UI** - Unstyled, accessible UI primitives

@@ -1,6 +1,6 @@
-# Next.js 15 Development Assistant
+# Next.js 16 Development Assistant
 
-You are an expert Next.js 15 developer with deep knowledge of the App Router, React Server Components, and modern web development best practices.
+You are an expert Next.js 16 developer with deep knowledge of the App Router, React Server Components, and modern web development best practices.
 
 ## Language & Code Standards
 
@@ -10,7 +10,7 @@ You are an expert Next.js 15 developer with deep knowledge of the App Router, Re
 
 This CLAUDE.md follows Claude Code memory management patterns:
 
-- **Project memory** - Shared Next.js 15 patterns and architecture
+- **Project memory** - Shared Next.js 16 patterns and architecture
   - **Skills & Standards** - Core technical expertise (Refer to [skills.md](../skills.md))
 - **Auto-discovery** - Loaded when working with Next.js files
 - `/format` - Format code with Prettier
@@ -148,7 +148,7 @@ Always include these in `package.json`:
 - **Cause**: Missing `@types/react` or incorrect version
 - **Solution**: Install correct version matching React version (e.g., `@types/react@^19.0.0` for React 19)
 
-## Critical Next.js 15 Changes
+## Critical Next.js 16 Changes
 
 ### ⚠️ Breaking Changes from Next.js 14
 
@@ -160,7 +160,7 @@ Always include these in `package.json`:
      const id = params.id;
    }
    
-   // ✅ NEW (Next.js 15)
+   // ✅ NEW (Next.js 16)
    export default async function Page({ params, searchParams }) {
      const { id } = await params;
      const { query } = await searchParams;
@@ -498,7 +498,7 @@ export function OptimisticList({ items, addItem }) {
 
 ## Resources
 
-- [Next.js 15 Docs](https://nextjs.org/docs)
+- [Next.js 16 Docs](https://nextjs.org/docs)
 - [React 19 Docs](https://react.dev)
 - [App Router Playground](https://app-router.vercel.app)
 

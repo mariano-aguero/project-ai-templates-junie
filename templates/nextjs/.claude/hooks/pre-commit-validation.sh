@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Next.js 15 Pre-commit Validation Hook
+# Next.js 16 Pre-commit Validation Hook
 # This script validates Next.js code before allowing commits
 
 set -e
 
 echo "🔍 Running Next.js pre-commit validation..."
 
-# Check for common Next.js 15 issues
+# Check for common Next.js 16 issues
 check_nextjs_patterns() {
     local file="$1"
     local errors=0
@@ -15,7 +15,7 @@ check_nextjs_patterns() {
     # Check for incorrect async params/searchParams usage
     if grep -q "params\." "$file" 2>/dev/null || grep -q "searchParams\." "$file" 2>/dev/null; then
         if ! grep -q "await params" "$file" 2>/dev/null && ! grep -q "await searchParams" "$file" 2>/dev/null; then
-            echo "⚠️  Warning in $file: params and searchParams are Promises in Next.js 15 - use await"
+            echo "⚠️  Warning in $file: params and searchParams are Promises in Next.js 16 - use await"
             errors=$((errors + 1))
         fi
     fi

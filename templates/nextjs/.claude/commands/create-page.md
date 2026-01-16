@@ -1,12 +1,12 @@
 ---
-description: Create a new Next.js 15 App Router page with proper structure
+description: Create a new Next.js 16 App Router page with proper structure
 argument-hint: "[route-path] [page-type]"
 allowed-tools: Write, Read, Bash
 ---
 
-Create a new Next.js 15 App Router page: $ARGUMENTS
+Create a new Next.js 16 App Router page: $ARGUMENTS
 
-Follow Next.js 15 best practices:
+Follow Next.js 16 best practices:
 1. Create app/[route-path]/page.tsx with async params/searchParams
 2. Add loading.tsx with proper Suspense fallback
 3. Add error.tsx as Client Component with error boundary

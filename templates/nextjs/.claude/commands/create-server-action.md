@@ -4,7 +4,7 @@ argument-hint: "<action-name> [model/entity]"
 description: Create a type-safe Server Action with validation and error handling
 ---
 
-Create a Next.js 15 Server Action named "$ARGUMENTS" with:
+Create a Next.js 16 Server Action named "$ARGUMENTS" with:
 
 1. Proper 'use server' directive
 2. Zod schema for input validation

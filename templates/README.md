@@ -35,7 +35,7 @@ This directory contains reusable templates and configurations for different tech
 **Path**: `templates/nextjs/`  
 **Purpose**: Modern Next.js application architecture  
 **Includes**:
-- Next.js 15 + App Router
+- Next.js 16 + App Router
 - React 19 + Server Components
 - Feature-based architecture
 - TypeScript configuration

@@ -53,7 +53,7 @@ All AI assistant behavior and knowledge is centralized in the **`.junie/`** dire
 
 ## 📦 Available Templates
 
-### ⚛️ [Next.js 15](./templates/nextjs/)
+### ⚛️ [Next.js 16](./templates/nextjs/)
 Modern React applications with App Router, Server Components, and type-safe Server Actions.
 
 **Includes**: Feature-based architecture, React 19, TypeScript 5+, next-safe-action, TanStack Query
@@ -159,7 +159,7 @@ templates/
 ## 🛠️ Technology Stack
 
 ### Frontend
-- **Framework**: Next.js 15, React 19
+- **Framework**: Next.js 16, React 19
 - **Styling**: Tailwind CSS, shadcn/ui, Radix UI
 - **State**: TanStack Query, Zustand
 - **Validation**: Zod, next-safe-action

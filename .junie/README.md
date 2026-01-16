@@ -55,7 +55,7 @@ The repository includes domain-specific templates in `../templates/`:
 templates/
 ├── audit/          # Smart contract security auditing
 ├── database/       # PostgreSQL, Prisma, GraphQL, Redis, BullMQ
-├── nextjs/         # Next.js 15, App Router, Server Components
+├── nextjs/         # Next.js 16, App Router, Server Components
 ├── ui/
 │   ├── shadcn/     # shadcn/ui accessible components
 │   └── tailwindcss/ # Tailwind CSS utility-first styling
@@ -140,7 +140,7 @@ Always search `templates/` directory before proposing new code. Reuse and adapt 
 
 ## 🛠️ Main Technologies
 
-- **Frontend**: Next.js 15, React 19, Tailwind CSS, shadcn/ui.
+- **Frontend**: Next.js 16, React 19, Tailwind CSS, shadcn/ui.
 - **Web3**: Solidity, Foundry, Hardhat, Viem, Wagmi, AppKit.
 - **Backend**: PostgreSQL, Redis, GraphQL, Prisma, BullMQ.
 - **Tools**: Zod, TypeScript 5, ESLint, Prettier, Slither, Aderyn, Commitlint, Husky.

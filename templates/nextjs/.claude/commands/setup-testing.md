@@ -1,11 +1,11 @@
 ---
 allowed-tools: Write, MultiEdit, Bash, Read
 argument-hint: "[jest|vitest|playwright|cypress]"
-description: Set up testing framework for Next.js 15
+description: Set up testing framework for Next.js 16
 model: claude-3-5-sonnet-20241022
 ---
 
-Set up testing for Next.js 15 with framework: $ARGUMENTS (default: jest)
+Set up testing for Next.js 16 with framework: $ARGUMENTS (default: jest)
 
 Steps to complete:
 
@@ -24,7 +24,7 @@ Steps to complete:
 
 Ensure the testing setup:
 
-- Works with Next.js 15's App Router
+- Works with Next.js 16's App Router
 - Handles async components appropriately
 - Includes proper mocking for Next.js modules
 - Supports TypeScript

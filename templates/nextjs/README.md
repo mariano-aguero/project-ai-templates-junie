@@ -1,6 +1,6 @@
-# Next.js 15 Claude Code Configuration 🚀
+# Next.js 16 Claude Code Configuration 🚀
 
-A comprehensive Claude Code configuration for building production-ready Next.js 15 applications with best practices, automated workflows, and intelligent assistance.
+A comprehensive Claude Code configuration for building production-ready Next.js 16 applications with best practices, automated workflows, and intelligent assistance.
 
 ## ✨ Features
 
@@ -10,15 +10,15 @@ This configuration provides:
 - **6 Powerful Commands** for common workflows
 - **Intelligent Hooks** for automated validation and formatting
 - **Optimized Settings** for Next.js development
-- **Comprehensive Memory** with Next.js 15 best practices
+- **Comprehensive Memory** with Next.js 16 best practices
 
 ## 📦 Installation
 
 1. Copy the `.claude` directory to your Next.js project root:
 
 ```bash
-cp -r nextjs-15/.claude your-nextjs-project/
-cp nextjs-15/CLAUDE.md your-nextjs-project/
+cp -r nextjs-16/.claude your-nextjs-project/
+cp nextjs-16/CLAUDE.md your-nextjs-project/
 ```
 
 2. The configuration will be automatically loaded when you start Claude Code in your project.
@@ -63,7 +63,7 @@ cp nextjs-15/CLAUDE.md your-nextjs-project/
 
 ### Pre-commit Validation
 
-- Validates Next.js 15 patterns (async params/searchParams)
+- Validates Next.js 16 patterns (async params/searchParams)
 - Checks for missing 'use client' directives
 - Validates environment variable usage
 - Runs TypeScript and ESLint checks
@@ -149,7 +149,7 @@ Edit `.claude/settings.json` to customize:
 
 ## 📚 Best Practices Enforced
 
-This configuration enforces Next.js 15 best practices:
+This configuration enforces Next.js 16 best practices:
 
 1. **Server Components by Default** - Minimizes client-side JavaScript
 2. **Proper Async Handling** - Handles async params/searchParams correctly
@@ -168,7 +168,7 @@ To upgrade the configuration:
 git pull origin main
 
 # Copy updated files
-cp -r nextjs-15/.claude your-project/
+cp -r nextjs-16/.claude your-project/
 ```
 
 ## 🤝 Contributing
@@ -230,7 +230,7 @@ MIT License - Feel free to use in your projects!
 
 Built using:
 
-- Official Next.js 15 documentation
+- Official Next.js 16 documentation
 - React 19 best practices
 - Community feedback and patterns
 - Production experience

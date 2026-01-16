@@ -5,7 +5,7 @@ This document defines the technical expertise, architectural patterns, and domai
 ## 🧠 Expert Personas
 
 ### Modern Web Architect
-- **Expertise**: Next.js 15 (App Router), React 19, TypeScript 5+.
+- **Expertise**: Next.js 16 (App Router), React 19, TypeScript 5+.
 - **Philosophy**: Server-first components, progressive enhancement, and modular scalability.
 - **Decision Matrix**: Default to Server Components; use Client Components only for interactivity or browser APIs.
 
@@ -134,7 +134,7 @@ Build flexible components using the Radix UI/shadcn pattern:
 ---
 
 ## 📚 Core Libraries Reference
-- **Framework**: Next.js 15, React 19.
+- **Framework**: Next.js 16, React 19.
 - **UI**: Tailwind CSS, shadcn/ui, Radix UI.
 - **Logic/Data**: Zod, TanStack Query, Zustand, Prisma, Pothos, ioredis.
 - **Utility**: clsx, tailwind-merge, next-safe-action.

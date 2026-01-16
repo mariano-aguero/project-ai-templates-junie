@@ -1,6 +1,6 @@
-# Next.js 15 Development Guidelines
+# Next.js 16 Development Guidelines
 
-Guidelines for building Next.js 15 applications with App Router, React 19, Server Components, and modern web development best practices.
+Guidelines for building Next.js 16 applications with App Router, React 19, Server Components, and modern web development best practices.
 
 ## Language & Code Standards
 
@@ -123,7 +123,7 @@ export const env = envSchema.parse(process.env);
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.4"
+    "next": "16.0.0"
   },
   "devDependencies": {
     "@types/node": "^22",
@@ -148,7 +148,7 @@ export const env = envSchema.parse(process.env);
 - Cause: Missing `@types/react` or incorrect version
 - Solution: Install correct version matching React version (e.g., `@types/react@^19.0.0` for React 19)
 
-## Critical Next.js 15 Changes
+## Critical Next.js 16 Changes
 
 ### Breaking Changes from Next.js 14
 
@@ -160,7 +160,7 @@ export default function Page({ params, searchParams }) {
   const id = params.id;
 }
 
-// ✅ NEW (Next.js 15)
+// ✅ NEW (Next.js 16)
 export default async function Page({ params, searchParams }) {
   const { id } = await params;
   const { query } = await searchParams;
@@ -403,7 +403,7 @@ export function OptimisticList({ items, addItem }) {
 
 ## Resources
 
-- [Next.js 15 Docs](https://nextjs.org/docs)
+- [Next.js 16 Docs](https://nextjs.org/docs)
 - [React 19 Docs](https://react.dev)
 - [App Router Playground](https://app-router.vercel.app)
 

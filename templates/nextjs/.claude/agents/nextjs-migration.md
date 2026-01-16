@@ -163,7 +163,7 @@ export default function Page() {
   const token = cookieStore.get('token');
 }
 
-// After (Next.js 15)
+// After (Next.js 16)
 export default async function Page() {
   const cookieStore = await cookies();
   const token = cookieStore.get('token');
@@ -259,7 +259,7 @@ pnpm dlx @next/codemod@latest new-link
 ### Version-Specific Codemods
 
 ```bash
-# Next.js 15 codemods
+# Next.js 16 codemods
 pnpm dlx @next/codemod@latest 15.0.0-async-request-api
 pnpm dlx @next/codemod@latest 15.0.0-navigation-hooks
 
