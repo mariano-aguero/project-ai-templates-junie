@@ -1,40 +1,49 @@
-# Claude Project Templates 🚀
+# AI Templates for Junie 🤖
 
-This repository contains a collection of professional templates and advanced configurations specifically designed to optimize the workflow with **Claude Code** and other AI assistants.
+Professional templates and AI directives optimized for use with **Junie** and other AI coding assistants.
 
-The goal is to provide the AI with a rich context, senior-level technical standards, and modern architectural patterns to generate high-quality, secure, and scalable code.
+> **Note**: This is a collection of reusable templates and conventions. This project serves as a template library, not a standalone application.
 
-## 📂 Project Structure
+---
 
-The repository is organized into specialized modules, each with its own memory configuration (`CLAUDE.md`) and standards:
+## 📚 Documentation
 
-- **[Next.js 15](./nextjs)**: Feature-based architecture, App Router, Server Components, and strict validation.
-- **[Web3 & dApps](./web3)**: Smart contract development (Solidity), AppKit/Wagmi/Viem integration, and on-chain security.
-- **[Database & API](./database)**: Data layer with PostgreSQL, Prisma, GraphQL (Pothos), Redis, and BullMQ.
-- **[UI & Styling](./ui)**: Consistent components with **shadcn/ui** and **Tailwind CSS**.
-- **[Security Audit](./audit)**: Methodologies and tools for smart contract security auditing.
+- **[Junie Directives & AI Conventions](.junie/README.md)** - Guidelines and standards for Junie AI assistant
+- **[Templates](./templates/)** - Reusable templates for different technology stacks
 
-## 🧠 The Heart: `skills.md`
+---
 
-At the root of the project is the **[skills.md](./skills.md)** file. This file centralizes:
-- **Expert Personas**: Defined roles for different domains (Web Architect, Security Auditor, etc.).
-- **Technical Standards**: Rules on data fetching, security, validation, and performance.
-- **Quality Checklist**: A verification list that the AI assistant follows before delivering any task.
+## 🚀 Quick Start
 
-## 🚀 How to use this repository
+### Using with Junie
 
-To integrate these skills into your project:
+1. Copy the `.junie/` folder to your project root
+2. Select the templates you need from `templates/`
+3. Junie will automatically detect and apply the directives
 
-1. Copy the `skills.md` and `.prettierrc` files to the root of your project.
-2. Copy the template directory you need (e.g., `nextjs/`) or simply its `CLAUDE.md` file to the corresponding subdirectory of your project.
-3. The AI assistant will automatically detect these configurations and adjust its behavior and code suggestions to the defined standards.
+### Manual Integration
 
-## 🛠️ Main Technologies
+```bash
+# Copy AI directives to your project
+cp -r .junie /path/to/your/project/
 
-- **Frontend**: Next.js 15, React 19, Tailwind CSS, shadcn/ui.
-- **Web3**: Solidity, Foundry, Hardhat, Viem, Wagmi, AppKit.
-- **Backend**: PostgreSQL, Redis, GraphQL, Prisma, BullMQ.
-- **Tools**: Zod, TypeScript 5, ESLint, Prettier, Slither, Aderyn, Commitlint, Husky.
+# Copy specific templates
+cp -r templates/nextjs /path/to/your/project/
+```
+
+---
+
+## 📦 Available Templates
+
+- **Next.js 15** - Modern React applications with App Router
+- **Web3** - Smart contracts and dApp development
+- **Database** - PostgreSQL, Prisma, GraphQL, Redis
+- **UI** - shadcn/ui and Tailwind CSS components
+- **Audit** - Smart contract security auditing tools
+
+See [templates/](./templates/) for detailed documentation.
+
+---
 
 ## 👤 Author
 
@@ -43,4 +52,7 @@ To integrate these skills into your project:
 - GitHub: [@mariano-aguero](https://github.com/mariano-aguero)
 
 ---
-*Generated with love for the developer community looking to boost their productivity with AI.*
+
+## 📄 License
+
+MIT
