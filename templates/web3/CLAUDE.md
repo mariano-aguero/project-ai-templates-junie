@@ -20,8 +20,8 @@ This CLAUDE.md follows Claude Code memory management patterns:
 - `/w3-contract [name]` - Generate a typed contract interface (viem/wagmi)
 - `/w3-hook [action]` - Create a custom hook for contract interaction
 - `/w3-siwe` - Scaffolding for Sign-In with Ethereum authentication
-- `/w3-wallet` - Setup wallet connection provider (AppKit/Web3Modal)
-- `/w3-appkit` - Scaffolding for AppKit (formerly Web3Modal) configuration
+- `/w3-wallet` - Setup wallet connection provider (AppKit)
+- `/w3-appkit` - Scaffolding for AppKit (Web3Modal) configuration
 - `/w3-explore [address]` - Fetch real-time data from Blockscout (requires Blockscout MCP)
 
 ### Smart Contracts (Solidity)

@@ -1,0 +1,60 @@
+{
+  "name": "@project/typescript-template",
+  "version": "1.0.0",
+  "description": "Professional TypeScript template with best practices for type-safe development",
+  "author": "Mariano Aguero <mariano.aguero@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariano-aguero/project-ai-templates-junie.git"
+  },
+  "keywords": [
+    "typescript",
+    "type-safety",
+    "best-practices",
+    "strict-mode",
+    "type-guards",
+    "generics",
+    "utility-types"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "scripts": {
+    "validate": "node -e \"console.log('✅ Configuration is valid')\"",
+    "info": "node -e \"console.log(JSON.stringify(require('./package.json'), null, 2))\"",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .ts,.tsx",
+    "commit": "cz",
+    "prepare": "husky install"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^19.x",
+    "@commitlint/config-conventional": "^19.x",
+    "@typescript-eslint/eslint-plugin": "^8.x",
+    "@typescript-eslint/parser": "^8.x",
+    "commitizen": "^4.x",
+    "cz-conventional-changelog": "^3.x",
+    "eslint": "^9.x",
+    "eslint-config-prettier": "^9.x",
+    "husky": "^9.x",
+    "prettier": "^3.x",
+    "typescript": "^5.x",
+    "vitest": "^2.x"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": false
+    }
+  }
+}

@@ -1,49 +1,102 @@
-# AI Assistant Configuration Guide 🤖
+# AI Configuration System
 
-This directory contains the complete AI assistant configuration for this project, optimized for **Junie** (JetBrains AI Assistant) and other AI coding assistants.
-
-## 📋 Overview
-
-This configuration system separates concerns into two complementary files:
-
-- **[guidelines.md](./guidelines.md)** - Behavioral rules, workflow standards, and decision-making processes
-- **[skills.md](./skills.md)** - Technical capabilities, expert personas, and domain-specific knowledge
-
-Together, these files provide AI assistants with the context needed to generate high-quality, consistent, and secure code.
+This directory contains the complete configuration for AI assistants (Junie).
 
 ---
 
-## 📚 Documentation Files
+## 📁 File Structure
 
-### 1. `guidelines.md` - Behavioral Rules & Workflow
+```
+.junie/
+├── README.md        ← You are here (system overview)
+├── guidelines.md    ← HOW: Behavioral rules, code standards, workflow
+├── skills.md        ← WHAT: Technical knowledge, patterns, expertise
+├── workflow.md      ← BOUNDARIES: Allowed/forbidden tasks, escalation
+└── prompts.md       ← TEMPLATES: Ready-to-use prompts for common tasks
 
-**Purpose**: Defines HOW the AI assistant should work and make decisions.
+AUTOMATION.md        ← ENFORCEMENT: CI/CD, pre-commit hooks, tooling
+```
 
-**Contains**:
-- **Template-First Approach**: Mandatory rule to search `templates/` before writing new code
-- **Package Management**: pnpm usage requirements and commands
-- **Code Formatting**: Prettier configuration standards (`.prettierrc`)
-- **Code Quality**: ESLint integration and TypeScript standards
-- **Language Standards**: English-only requirement for all code and documentation
-- **Git Standards**: Conventional Commits specification and tooling
-- **Project Structure**: Feature-based architecture guidelines
-- **Security Standards**: Input validation and environment variable handling
-- **Workflow Guidelines**: Step-by-step processes for starting, writing, and completing tasks
+---
 
-**When to reference**: When you need to understand the project's behavioral expectations, coding standards, or workflow processes.
+## 🎯 Purpose of Each File
 
-### 2. `skills.md` - Technical Capabilities
+| File | Question It Answers | Read When |
+|------|---------------------|-----------|
+| **guidelines.md** | "How should I work?" | Every task |
+| **skills.md** | "What do I know?" | Technical decisions |
+| **workflow.md** | "What can I do?" | Before starting any task |
+| **prompts.md** | "How do I ask for X?" | Requesting specific work |
+| **AUTOMATION.md** | "How is quality enforced?" | Setting up projects |
 
-**Purpose**: Defines WHAT the AI assistant knows and can do.
+---
 
-**Contains**:
-- **Expert Personas**: Specialized roles (Web Architect, Web3 Engineer, Security Auditor, Database Architect, UI/UX Engineer)
-- **Architectural Patterns**: Feature-based architecture, compositional UI patterns
-- **Technical Standards**: Data fetching, state management, security, validation
-- **TypeScript Best Practices**: Configuration, type safety, null handling
-- **Technical Quality Checklist**: Verification points for architecture, type safety, UI, data, and Web3
+## 🔄 How They Work Together
 
-**When to reference**: When you need to understand the technical capabilities, architectural patterns, or domain-specific expertise available.
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    AI ASSISTANT (Junie)                     │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  1. Read workflow.md     → Know what you CAN/CANNOT do     │
+│  2. Read guidelines.md   → Know HOW to do it               │
+│  3. Read skills.md       → Know WHAT tech patterns to use  │
+│  4. Use prompts.md       → Get task templates              │
+│                                                             │
+│  5. Generate code                                           │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│                   AUTOMATION LAYER                          │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  Pre-commit hooks  →  Lint + Format (fast, local)          │
+│  CI/CD pipeline    →  Full validation (thorough, remote)   │
+│                                                             │
+│  ❌ Bad code? → Rejected automatically                     │
+│  ✅ Good code? → Merged safely                             │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 📋 File Summaries
+
+### guidelines.md (Behavioral Rules)
+
+- Template-first approach (always check templates/ first)
+- pnpm only (never npm or yarn)
+- Prettier formatting (no semicolons, double quotes)
+- Conventional Commits
+- English only
+- Feature-based architecture
+- Zod validation for all inputs
+
+### skills.md (Technical Knowledge)
+
+- Expert personas (Web Architect, Web3 Engineer, etc.)
+- Architectural patterns (Feature-based, Compound Components)
+- Technical standards (TypeScript, Prisma, TanStack Query)
+- Quality checklists
+
+### workflow.md (Task Boundaries)
+
+- Allowed tasks (implementation, refactoring, testing)
+- Forbidden tasks (architecture, security decisions, deployments)
+- Task size limits
+- Escalation rules
+
+### prompts.md (Ready Templates)
+
+- Implementation prompts
+- Code review prompts
+- Refactoring prompts
+- Testing prompts
+- Web3-specific prompts
+- Database prompts
 
 ---
 
@@ -70,6 +123,35 @@ Each template includes:
 
 ---
 
+## 🚀 Quick Start for AI Assistants
+
+### At the Start of Every Session
+
+```markdown
+1. Read .junie/workflow.md    → Understand your boundaries
+2. Read .junie/guidelines.md  → Understand the rules
+3. Check templates/           → Find existing patterns
+```
+
+### Before Writing Code
+
+```markdown
+1. Is this task allowed? (check workflow.md)
+2. Is there a template? (check templates/)
+3. What patterns apply? (check skills.md)
+```
+
+### After Writing Code
+
+```markdown
+1. Run: pnpm lint
+2. Run: pnpm format:check
+3. Run: pnpm typecheck
+4. Run: pnpm test
+```
+
+---
+
 ## 🚀 How to Use This Configuration
 
 ### For Developers
@@ -81,62 +163,49 @@ Each template includes:
    cp -r .junie /path/to/your/project/
    ```
 
-2. **Copy relevant templates**:
+2. **Copy AUTOMATION.md** for CI/CD setup:
+   ```bash
+   cp AUTOMATION.md /path/to/your/project/
+   ```
+
+3. **Copy relevant templates**:
    ```bash
    cp -r templates/nextjs /path/to/your/project/
    cp -r templates/web3 /path/to/your/project/
    ```
 
-3. **Copy formatting configuration**:
-   ```bash
-   cp .prettierrc /path/to/your/project/
-   ```
-
-4. **Reference in AI prompts**:
-   ```
-   "Follow the standards in .junie/guidelines.md and .junie/skills.md"
-   ```
+4. **Use prompts from `.junie/prompts.md`**:
+   - Copy-paste ready-to-use prompts for common tasks
+   - Customize with your specific requirements
 
 ### For AI Assistants (Junie)
 
-**Automatic detection**: Junie automatically detects and applies directives from `.junie/` when present in the project root.
-
-**Manual reference**: You can explicitly reference specific files in issue descriptions:
-```
-Please follow the guidelines in .junie/guidelines.md and use the 
-Next.js patterns from templates/nextjs/guidelines.md
-```
-
 **Decision flow**:
-1. Read `guidelines.md` to understand behavioral expectations
-2. Read `skills.md` to understand technical capabilities
-3. Check `templates/` for existing patterns before writing new code
-4. Apply the appropriate expert persona from `skills.md`
-5. Follow the workflow from `guidelines.md`
+1. Read `workflow.md` to understand what you CAN/CANNOT do
+2. Read `guidelines.md` to understand HOW to do it
+3. Read `skills.md` to understand WHAT tech patterns to use
+4. Use `prompts.md` to get task templates
+5. Check `templates/` for existing patterns before writing new code
 
 ---
 
-## 🎯 Key Principles
+## 🔑 Key Principles
 
-### Template-First Development
-Always search `templates/` directory before proposing new code. Reuse and adapt existing patterns.
+1. **AI is an assistant, not an agent**
+   - Humans make decisions
+   - AI executes well-scoped tasks
 
-### Separation of Concerns
-- **Behavioral rules** → `guidelines.md`
-- **Technical capabilities** → `skills.md`
-- **Domain patterns** → `templates/*/guidelines.md`
+2. **Templates before code**
+   - Reuse existing patterns
+   - Maintain consistency
 
-### Consistency
-- Use **pnpm** for package management
-- Follow **Prettier** configuration (`.prettierrc`)
-- Write all code in **English**
-- Use **Conventional Commits** for git messages
+3. **Automation enforces quality**
+   - Pre-commit catches issues early
+   - CI/CD prevents bad merges
 
-### Quality
-- Validate inputs with **Zod**
-- Enable TypeScript **strict mode**
-- Follow **feature-based architecture**
-- Implement proper **error handling**
+4. **Explicit boundaries**
+   - Clear allowed/forbidden tasks
+   - Escalation when uncertain
 
 ## 🛠️ Main Technologies
 

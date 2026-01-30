@@ -6,7 +6,7 @@ This directory contains the development standards and patterns for building Dece
 - **Solidity**: Primary language for smart contract development.
 - **Foundry / Hardhat**: Industry-standard frameworks for testing and deployment.
 - **OpenZeppelin**: Audited smart contract library.
-- **AppKit (formerly Web3Modal)**: Official WalletConnect library for the best connectivity and multi-chain support.
+- **AppKit (Web3Modal)**: Official WalletConnect library for the best connectivity and multi-chain support.
 - **viem**: Low-level TypeScript interface for Ethereum.
 - **wagmi**: React Hooks for Ethereum.
 - **SIWE**: Sign-In with Ethereum for secure authentication.

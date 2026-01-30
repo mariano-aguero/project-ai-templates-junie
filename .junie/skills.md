@@ -132,9 +132,18 @@ Build flexible components using the Radix UI/shadcn pattern:
 - [ ] Are we using audited standards (OpenZeppelin) for Web3?
 
 ---
-
 ## 📚 Core Libraries Reference
 - **Framework**: Next.js 16, React 19.
 - **UI**: Tailwind CSS, shadcn/ui, Radix UI.
 - **Logic/Data**: Zod, TanStack Query, Zustand, Prisma, Pothos, ioredis.
 - **Utility**: clsx, tailwind-merge, next-safe-action.
+
+---
+
+## 📚 Additional Resources
+
+- **Behavioral Rules**: See [guidelines.md](./guidelines.md) - How to work and code standards
+- **Task Boundaries**: See [workflow.md](./workflow.md) - What AI can/cannot do
+- **Ready-to-use Prompts**: See [prompts.md](./prompts.md) - Templates for common tasks
+- **Automation Setup**: See [../AUTOMATION.md](../AUTOMATION.md) - CI/CD and quality gates
+- **Template Documentation**: See [../templates/README.md](../templates/README.md)

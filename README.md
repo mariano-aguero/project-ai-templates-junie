@@ -1,4 +1,4 @@
-# 🤖 AI-Powered Development Templates
+P# 🤖 AI-Powered Development Templates
 
 > **A curated collection of production-ready templates and AI assistant configurations for modern web development**
 
@@ -40,10 +40,17 @@ All AI assistant behavior and knowledge is centralized in the **`.junie/`** dire
 |------|---------|----------|
 | **[`.junie/guidelines.md`](.junie/guidelines.md)** | Behavioral Rules | How AI should work: template-first approach, code standards, workflows |
 | **[`.junie/skills.md`](.junie/skills.md)** | Technical Capabilities | What AI knows: expert personas, architectural patterns, tech standards |
+| **[`.junie/workflow.md`](.junie/workflow.md)** | Task Boundaries | What AI can/cannot do: allowed tasks, forbidden tasks, escalation rules |
+| **[`.junie/prompts.md`](.junie/prompts.md)** | Prompt Templates | Ready-to-use prompts for implementation, review, refactoring, testing |
+| **[`.junie/docs/automation.md`](.junie/docs/automation.md)** | Quality Enforcement | CI/CD pipelines, pre-commit hooks, automated validation |
+| **[`.junie/docs/workflow-guide.md`](.junie/docs/workflow-guide.md)** | Workflow Guide | Comprehensive guide to AI-assisted development |
 | **[`.junie/README.md`](.junie/README.md)** | Configuration Guide | How to use the AI configuration system |
 
 **Key Features**:
 - 🔍 **Template-First Mandate**: AI always searches existing templates before writing new code
+- 🚦 **Clear Boundaries**: Explicit allowed/forbidden tasks prevent architectural mistakes
+- 📋 **Ready Prompts**: Copy-paste templates for common development tasks
+- 🤖 **Automated Quality**: Pre-commit hooks and CI/CD ensure code quality
 - 📦 **pnpm-Only Policy**: Consistent package management across all projects
 - 🎨 **Prettier Standards**: Automated code formatting with project-wide configuration
 - 🔒 **Security-First**: Mandatory input validation, type safety, and best practices
@@ -57,6 +64,11 @@ All AI assistant behavior and knowledge is centralized in the **`.junie/`** dire
 Modern React applications with App Router, Server Components, and type-safe Server Actions.
 
 **Includes**: Feature-based architecture, React 19, TypeScript 5+, next-safe-action, TanStack Query
+
+### 📘 [TypeScript](./templates/typescript/)
+TypeScript best practices and type-safe development patterns.
+
+**Includes**: Strict type safety, type guards, generics, utility types, conditional types, ESLint + TypeScript, Vitest
 
 ### 🔗 [Web3 & Smart Contracts](./templates/web3/)
 Complete Web3 development stack for dApps and smart contracts.
@@ -125,6 +137,28 @@ cp templates/nextjs/tsconfig.json /path/to/your/project/
 cp templates/ui/tailwindcss/tailwind.config.ts /path/to/your/project/
 ```
 
+### Option 4: Use Prompt Generator (Fastest)
+
+Generate custom prompts for Junie automatically:
+
+```bash
+# Copy the script to your project
+cp scripts/generate-prompt.sh /path/to/your/project/scripts/
+chmod +x /path/to/your/project/scripts/generate-prompt.sh
+
+# Interactive mode (recommended)
+./scripts/generate-prompt.sh
+
+# Or direct mode
+./scripts/generate-prompt.sh feature wallet-connection web3
+./scripts/generate-prompt.sh component Button ui-shadcn
+./scripts/generate-prompt.sh hook useTokenBalance web3
+```
+
+**Available prompt types**: feature, component, hook, contract, test, refactor, review, fix
+
+See **[scripts/README.md](scripts/README.md)** for complete documentation.
+
 ---
 
 ## 🎓 How It Works
@@ -140,17 +174,21 @@ cp templates/ui/tailwindcss/tailwind.config.ts /path/to/your/project/
 
 ```
 .junie/
+├── README.md        # Guide for developers and AI assistants
 ├── guidelines.md    # HOW AI should work (behavior, workflow, standards)
 ├── skills.md        # WHAT AI knows (capabilities, patterns, expertise)
-└── README.md        # Guide for developers and AI assistants
+├── workflow.md      # BOUNDARIES: What AI can/cannot do autonomously
+└── prompts.md       # TEMPLATES: Ready-to-use prompts for common tasks
 
 templates/
 ├── nextjs/          # Next.js-specific patterns and guidelines
+├── typescript/      # TypeScript best practices and patterns
 ├── web3/            # Web3-specific patterns and guidelines
 ├── database/        # Database-specific patterns and guidelines
 ├── ui/              # UI-specific patterns and guidelines
 └── audit/           # Security audit patterns and guidelines
 
+AUTOMATION.md        # MOVED to .junie/docs/automation.md
 .prettierrc          # Code formatting standards (project-wide)
 ```
 
@@ -187,9 +225,18 @@ templates/
 
 ## 📖 Documentation
 
+### AI Configuration
 - **[AI Configuration Guide](.junie/README.md)** - Complete guide to the AI system
 - **[Behavioral Guidelines](.junie/guidelines.md)** - How AI should work
 - **[Technical Capabilities](.junie/skills.md)** - What AI knows
+- **[Task Boundaries](.junie/workflow.md)** - What AI can/cannot do
+- **[Prompt Templates](.junie/prompts.md)** - Ready-to-use prompts
+
+### Automation & Quality
+- **[Automation Guide](.junie/docs/automation.md)** - CI/CD, pre-commit hooks, quality gates
+- **[Complete Workflow Guide](.junie/docs/workflow-guide.md)** - Step-by-step development guide
+
+### Templates
 - **[Templates Overview](./templates/README.md)** - All available templates
 
 ---

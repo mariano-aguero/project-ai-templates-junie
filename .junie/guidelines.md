@@ -37,6 +37,11 @@ templates/
 │   ├── CLAUDE.md
 │   ├── guidelines.md
 │   └── package.json
+├── typescript/                  # TypeScript best practices
+│   ├── README.md
+│   ├── CLAUDE.md
+│   ├── guidelines.md
+│   └── package.json
 ├── ui/
 │   ├── shadcn/                  # shadcn/ui components
 │   │   ├── README.md
@@ -308,9 +313,55 @@ Before submitting any code, verify:
 
 ---
 
+## 🔍 Automatic Validation in [CODE] Mode
+
+**MANDATORY**: When working in `[CODE]` mode, before executing the `submit` tool, you MUST run the following validation commands **if they are available** in the project's `package.json`:
+
+### Validation Commands (in order)
+
+1. **`pnpm lint`** - Check for code quality issues
+2. **`pnpm format`** - Ensure code formatting is correct
+3. **`pnpm typecheck`** - Verify TypeScript type correctness
+4. **`pnpm test`** - Run all tests to ensure nothing is broken
+
+### Execution Rules
+
+- **Check availability**: Before running each command, verify it exists in `package.json` scripts
+- **Run sequentially**: Execute commands in the order listed above
+- **Stop on failure**: If any command fails, do NOT proceed to `submit`
+  - Analyze the error output
+  - Fix the issues
+  - Re-run the failed command and subsequent ones
+- **Report results**: Include validation results in your `submit` summary
+
+### Example Workflow
+
+```bash
+# Check if scripts exist in package.json, then run:
+pnpm lint        # ✓ No errors
+pnpm format      # ✓ Formatted
+pnpm typecheck   # ✓ No type errors
+pnpm test        # ✓ All tests pass
+```
+
+**Only after all available validation commands pass successfully**, proceed with the `submit` tool.
+
+### Exceptions
+
+You may skip automatic validation if:
+- The project has no `package.json` (not a Node.js/pnpm project)
+- The task explicitly states "skip validation" or "no tests needed"
+- You're working on documentation-only changes (README, markdown files, etc.)
+
+---
+
 ## 📚 Additional Resources
 
-- **Technical Capabilities**: See [skills.md](./skills.md)
+- **Task Boundaries**: See [workflow.md](./workflow.md) - What AI can/cannot do
+- **Ready-to-use Prompts**: See [prompts.md](./prompts.md) - Templates for common tasks
+- **Technical Capabilities**: See [skills.md](./skills.md) - Domain expertise and patterns
+- **Automation Setup**: See [docs/automation.md](./docs/automation.md) - CI/CD and quality gates
+- **Workflow Guide**: See [docs/workflow-guide.md](./docs/workflow-guide.md) - Complete development guide
 - **Template Documentation**: See [../templates/README.md](../templates/README.md)
 - **Project Overview**: See [../README.md](../README.md)
 

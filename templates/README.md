@@ -45,6 +45,20 @@ This directory contains reusable templates and configurations for different tech
 
 ---
 
+### 📘 TypeScript
+**Path**: `templates/typescript/`  
+**Purpose**: TypeScript best practices and type-safe development patterns  
+**Includes**:
+- Strict type safety configuration
+- Type guards and runtime validation
+- Advanced TypeScript patterns (generics, utility types, conditional types)
+- ESLint + TypeScript rules
+- Testing patterns with Vitest
+
+**Documentation**: See [typescript/README.md](./typescript/README.md)
+
+---
+
 ### 🎨 UI
 **Path**: `templates/ui/`  
 **Purpose**: UI component libraries and styling systems  
