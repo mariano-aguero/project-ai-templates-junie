@@ -1,4 +1,4 @@
-P# 🤖 AI-Powered Development Templates
+# 🤖 AI-Powered Development Templates
 
 > **A curated collection of production-ready templates and AI assistant configurations for modern web development**
 
