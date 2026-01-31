@@ -360,8 +360,8 @@ You may skip automatic validation if:
 - **Task Boundaries**: See [workflow.md](./workflow.md) - What AI can/cannot do
 - **Ready-to-use Prompts**: See [prompts.md](./prompts.md) - Templates for common tasks
 - **Technical Capabilities**: See [skills.md](./skills.md) - Domain expertise and patterns
-- **Automation Setup**: See [docs/automation.md](./docs/automation.md) - CI/CD and quality gates
-- **Workflow Guide**: See [docs/workflow-guide.md](./docs/workflow-guide.md) - Complete development guide
+- **Automation Setup**: See [`.junie/docs/automation.md`](.junie/docs/automation.md) - CI/CD and quality gates
+- **Workflow Guide**: See [`.junie/docs/workflow-guide.md`](.junie/docs/workflow-guide.md) - Complete development guide
 - **Template Documentation**: See [../templates/README.md](../templates/README.md)
 - **Project Overview**: See [../README.md](../README.md)
 

@@ -180,7 +180,10 @@ See **[scripts/README.md](scripts/README.md)** for complete documentation.
 ├── guidelines.md    # HOW AI should work (behavior, workflow, standards)
 ├── skills.md        # WHAT AI knows (capabilities, patterns, expertise)
 ├── workflow.md      # BOUNDARIES: What AI can/cannot do autonomously
-└── prompts.md       # TEMPLATES: Ready-to-use prompts for common tasks
+├── prompts.md       # TEMPLATES: Ready-to-use prompts for common tasks
+└── docs/
+    ├── automation.md      # CI/CD and quality gates
+    └── workflow-guide.md  # Complete development guide
 
 templates/
 ├── nextjs/          # Next.js-specific patterns and guidelines
@@ -190,7 +193,6 @@ templates/
 ├── ui/              # UI-specific patterns and guidelines
 └── audit/           # Security audit patterns and guidelines
 
-AUTOMATION.md        # MOVED to .junie/docs/automation.md
 .prettierrc          # Code formatting standards (project-wide)
 ```
 

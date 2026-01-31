@@ -156,5 +156,6 @@ Build flexible components using the Radix UI/shadcn pattern:
 - **Behavioral Rules**: See [guidelines.md](./guidelines.md) - How to work and code standards
 - **Task Boundaries**: See [workflow.md](./workflow.md) - What AI can/cannot do
 - **Ready-to-use Prompts**: See [prompts.md](./prompts.md) - Templates for common tasks
-- **Automation Setup**: See [../AUTOMATION.md](../AUTOMATION.md) - CI/CD and quality gates
+- **Automation Setup**: See [`.junie/docs/automation.md`](.junie/docs/automation.md) - CI/CD and quality gates
+- **Workflow Guide**: See [`.junie/docs/workflow-guide.md`](.junie/docs/workflow-guide.md) - Comprehensive guide to AI-assisted development
 - **Template Documentation**: See [../templates/README.md](../templates/README.md)
