@@ -26,6 +26,7 @@ This repository is an **AI-enhanced template library** designed to supercharge y
 - **Clear separation** between behavioral rules and technical capabilities
 - **Comprehensive documentation** for both humans and AI assistants
 - **Consistent standards** across all templates and projects
+- **[Productivity Impact Report](./docs/productivity-impact.md)**: Detailed analysis of the 15X performance boost using this system
 - **Easy to extend** with your own templates and guidelines
 
 ---
@@ -40,6 +41,7 @@ All AI assistant behavior and knowledge is centralized in the **`.junie/`** dire
 |------|---------|----------|
 | **[`.junie/guidelines.md`](.junie/guidelines.md)** | Behavioral Rules | How AI should work: template-first approach, code standards, workflows |
 | **[`.junie/skills.md`](.junie/skills.md)** | Technical Capabilities | What AI knows: expert personas, architectural patterns, tech standards |
+| **[`docs/productivity-impact.md`](docs/productivity-impact.md)** | ROI & Performance | Analysis of the 15X productivity boost and Multi-Agent workflows |
 | **[`.junie/workflow.md`](.junie/workflow.md)** | Task Boundaries | What AI can/cannot do: allowed tasks, forbidden tasks, escalation rules |
 | **[`.junie/prompts.md`](.junie/prompts.md)** | Prompt Templates | Ready-to-use prompts for implementation, review, refactoring, testing |
 | **[`.junie/docs/automation.md`](.junie/docs/automation.md)** | Quality Enforcement | CI/CD pipelines, pre-commit hooks, automated validation |

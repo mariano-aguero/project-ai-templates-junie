@@ -40,6 +40,17 @@ This document defines the technical expertise, architectural patterns, and domai
 
 ## 🏗️ Architectural Patterns
 
+### 18. Multi-Agent Collaboration & Self-Audit
+- **Expertise**: Multi-step orchestration, parallel task distribution, and automated self-review.
+- **Philosophy**: "Verify early, audit often."
+- **Workflow**:
+  - **The Specialist (Parallel Architect)**: Feed your task description and `generate-prompt.sh` output to a separate Claude.ai instance. Ask it to "Identify 5 edge cases for this logic" while the Orchestrator builds the core.
+  - **The Auditor (Post-Check)**: After every major code generation, perform a "Self-Audit" step.
+- **Automated Audit Rule**: Before calling `submit` in `[CODE]` mode, the assistant MUST simulate or perform a "Security & Performance Review" by checking:
+  - Input validation (Zod).
+  - Proper error handling (try/catch, next-safe-action).
+  - Data privacy (leaking sensitive fields).
+  - N+1 query patterns.
 ### 1. Feature-Based Architecture
 Organize by business domain to ensure modularity:
 ```text
